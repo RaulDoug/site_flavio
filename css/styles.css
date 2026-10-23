@@ -2899,11 +2899,11 @@ button {
     height: 30px;
   }
 
-  /* Hero Mobile — altura maior e presença ampliada (fiel ao 1º celular da referência) */
+  /* Hero Mobile — fiel ao 1º celular da imagem de referência */
   .hero-card {
-    padding-top: 22px;
-    padding-bottom: 26px;
-    min-height: clamp(760px, 95svh, 860px);
+    padding-top: 20px;
+    padding-bottom: 24px;
+    min-height: auto;
   }
 
   .hero-grid {
@@ -2911,16 +2911,15 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1;
-    padding-top: 18px;
-    padding-bottom: 84px;
-    min-height: 670px;
+    padding-top: 12px;
+    padding-bottom: 76px;
+    min-height: 580px;
   }
 
   .hero-content {
     position: static;
     padding-bottom: 0;
-    gap: 18px;
+    gap: 16px;
     width: 100%;
   }
 
@@ -2928,10 +2927,10 @@ button {
   .hero-metrics {
     flex-direction: column;
     align-items: flex-start;
-    gap: 22px;
+    gap: 16px;
     width: 46%;
-    margin-top: 26px;
-    padding-top: 10px;
+    margin-top: 12px;
+    padding-top: 8px;
     position: relative;
     z-index: 10;
   }
@@ -2959,36 +2958,36 @@ button {
   .hero-cta-group .btn-primary-pill {
     width: 100%;
     justify-content: center;
-    padding: 18px 24px;
+    padding: 17px 24px;
     box-shadow: 0 14px 32px rgba(8, 12, 36, 0.5);
   }
 
-  /* Foto do Dr. Flávio + esfera azul concêntrica + órbitas à direita no mobile */
+  /* Foto do Dr. Flávio + esfera azul + órbitas à direita no mobile */
   .hero-visual {
     position: absolute;
-    bottom: -26px;
-    right: -24px;
-    width: 76%;
-    height: 430px;
+    bottom: -24px;
+    right: -28px;
+    width: 72%;
+    height: 360px;
     min-height: 0;
     pointer-events: none;
     z-index: 5;
   }
 
   .surgical-disc {
-    width: 256px;
-    height: 256px;
-    bottom: 55px;
+    width: 230px;
+    height: 230px;
+    bottom: 44px;
   }
 
   .orbital-system {
-    width: 350px;
-    height: 350px;
-    bottom: 8px;
+    width: 310px;
+    height: 310px;
+    bottom: 4px;
   }
 
   .doctor-cutout-img {
-    width: 300px;
+    width: 265px;
   }
 
   .glass-pill {

@@ -255,8 +255,8 @@ site_flavio/
      - Transformado o menu mobile em um card flutuante translúcido (`backdrop-filter: blur(22px)`, `border-radius: 28px`) que se expande suavemente (`grid-template-rows: 0fr -> 1fr`, `transform: translateY(-10px) scale(0.95) -> translateY(0) scale(1)`, `opacity: 0 -> 1`) com entrada escalonada das opções via GSAP (`stagger: 0.035`), expansão circular azul ao tocar em cada opção (`.mobile-nav-link`) e fechamento automático ao selecionar um item ou tocar fora.
   2. **Efeitos dos Botões do Desktop Aplicados ao Clicar/Tocar no Mobile (`.is-touch-active`):**
      - Atualizado `initInteractiveButtons()` em `js/main.js` e as regras `.is-touch-active` em `css/styles.css` para que, ao clicar/tocar nos botões no celular, ocorram os mesmos efeitos visuais do hover no desktop (expansão azul nos botões `"Agendar"`, `"Receber avaliação"`, `"Como chegar"` e `"Agendar pelo WhatsApp"`, glow e borda luminosa no CTA do Hero, e expansão branca com transição de ícone para azul no Instagram e Facebook).
-  3. **Hero com Altura Maior no Mobile (`@media (max-width: 767px)`):**
-     - Aumentada a altura do `.hero-card` no mobile para `min-height: clamp(760px, 95svh, 860px)` (`.hero-grid` com `min-height: 670px`), ampliando proporcionalmente o respiro das métricas à esquerda e o conjunto visual à direita (`.hero-visual` com `430px`, `.orbital-system` com `350px`, `.surgical-disc` concêntrico com `256px` e `.doctor-cutout-img` com `300px`).
+  3. **Reversão da Altura do Hero no Mobile (`@media (max-width: 767px)`):**
+     - Revertida a altura do `.hero-card` no mobile para o valor original (`min-height: auto`, `.hero-grid` com `min-height: 580px` e padding ajustado), restaurando as proporções anteriores da foto do Dr. Flávio (`width: 265px`), do disco cirúrgico (`230px`), órbitas (`310px`) e enquadramento compacto fiel ao design de referência.
 - **Skills utilizadas:**
   - `mobile-native`, `animate`, `animation-performance`, `apple-design`, `emil-design-eng`, `impeccable`.
 - **Arquivos criados/modificados:**
