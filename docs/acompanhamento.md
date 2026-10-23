@@ -249,6 +249,22 @@ site_flavio/
   - `js/main.js` (modificado)
   - `docs/acompanhamento.md` (atualizado)
 
+### [2026-10-23] — Etapa 7: Ajustes Mobile — Menu em Card Expandível, Efeitos de Botão no Toque/Clique e Hero Mobile com Altura Maior
+- **O que foi feito:**
+  1. **Menu Navbar Mobile em Card Expandível (`#mobileNavDrawer`):**
+     - Transformado o menu mobile em um card flutuante translúcido (`backdrop-filter: blur(22px)`, `border-radius: 28px`) que se expande suavemente (`grid-template-rows: 0fr -> 1fr`, `transform: translateY(-10px) scale(0.95) -> translateY(0) scale(1)`, `opacity: 0 -> 1`) com entrada escalonada das opções via GSAP (`stagger: 0.035`), expansão circular azul ao tocar em cada opção (`.mobile-nav-link`) e fechamento automático ao selecionar um item ou tocar fora.
+  2. **Efeitos dos Botões do Desktop Aplicados ao Clicar/Tocar no Mobile (`.is-touch-active`):**
+     - Atualizado `initInteractiveButtons()` em `js/main.js` e as regras `.is-touch-active` em `css/styles.css` para que, ao clicar/tocar nos botões no celular, ocorram os mesmos efeitos visuais do hover no desktop (expansão azul nos botões `"Agendar"`, `"Receber avaliação"`, `"Como chegar"` e `"Agendar pelo WhatsApp"`, glow e borda luminosa no CTA do Hero, e expansão branca com transição de ícone para azul no Instagram e Facebook).
+  3. **Hero com Altura Maior no Mobile (`@media (max-width: 767px)`):**
+     - Aumentada a altura do `.hero-card` no mobile para `min-height: clamp(760px, 95svh, 860px)` (`.hero-grid` com `min-height: 670px`), ampliando proporcionalmente o respiro das métricas à esquerda e o conjunto visual à direita (`.hero-visual` com `430px`, `.orbital-system` com `350px`, `.surgical-disc` concêntrico com `256px` e `.doctor-cutout-img` com `300px`).
+- **Skills utilizadas:**
+  - `mobile-native`, `animate`, `animation-performance`, `apple-design`, `emil-design-eng`, `impeccable`.
+- **Arquivos criados/modificados:**
+  - `index.html` (modificado)
+  - `css/styles.css` (modificado)
+  - `js/main.js` (modificado)
+  - `docs/acompanhamento.md` (atualizado)
+
 ---
 
 ## 5. Próximas Etapas Previstas (Lapidação Seção por Seção)

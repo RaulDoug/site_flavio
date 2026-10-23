@@ -523,6 +523,40 @@ button {
   transform: scale(0.95);
 }
 
+/* Estado de toque no Mobile (.is-touch-active): aplica os mesmos efeitos de hover do Desktop ao clicar/tocar */
+.btn-primary-pill.is-touch-active,
+.btn-nav-circle.is-touch-active {
+  background-color: var(--blue-electric-hover);
+}
+
+.hero-cta-group .btn-primary-pill.is-touch-active {
+  --spot-opacity: 1;
+  box-shadow: 0 10px 30px rgba(50, 74, 205, 0.55);
+}
+
+.btn-white-pill.is-touch-active {
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 30px rgba(8, 12, 36, 0.28);
+}
+
+.btn-white-pill.is-touch-active .btn-footer-wa-icon::before {
+  transform: scale(18);
+}
+
+.btn-white-pill.is-touch-active .btn-white-pill-label,
+.btn-white-pill.is-touch-active .btn-footer-wa-icon {
+  color: var(--white);
+}
+
+.btn-outline-pill.is-touch-active {
+  border-color: var(--blue-electric);
+  box-shadow: 0 8px 24px rgba(50, 74, 205, 0.4);
+}
+
+.btn-outline-pill.is-touch-active .btn-wa-circle::before {
+  transform: scale(10);
+}
+
 /* Hover apenas em dispositivos com mouse fino (mobile-native) */
 @media (hover: hover) and (pointer: fine) {
   .btn-primary-pill:hover,
@@ -703,37 +737,113 @@ button {
   transform: translateY(-3.4px) rotate(-45deg);
 }
 
-/* Mobile Drawer */
+/* Mobile Drawer — Card Expandível de Navegação */
 .mobile-nav-drawer {
-  display: none;
+  position: absolute;
+  top: 86px;
+  left: max(var(--section-inner-x), calc((100% - var(--container-max)) / 2 + var(--section-inner-x)));
+  right: max(var(--section-inner-x), calc((100% - var(--container-max)) / 2 + var(--section-inner-x)));
+  display: grid;
+  grid-template-rows: 0fr;
   background: rgba(12, 17, 51, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(169, 184, 255, 0.16);
-  border-radius: var(--radius-card);
-  padding: 20px;
-  margin-bottom: 16px;
-  z-index: 25;
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(169, 184, 255, 0.22);
+  border-radius: 28px;
+  padding: 0 18px;
+  box-shadow: 0 28px 60px rgba(6, 10, 30, 0.52);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px) scale(0.95);
+  transform-origin: top right;
+  transition:
+    grid-template-rows 440ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 440ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 440ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 280ms ease,
+    visibility 440ms;
+  z-index: 40;
 }
 
 .mobile-nav-drawer.is-open {
-  display: block;
+  grid-template-rows: 1fr;
+  padding: 18px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.mobile-nav-card-inner {
+  overflow: hidden;
 }
 
 .mobile-nav-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .mobile-nav-link {
-  display: block;
-  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 0.96875rem;
   font-weight: 500;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(169, 184, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 150ms var(--ease-out), border-color 240ms ease;
+}
+
+.mobile-nav-link > span {
+  position: relative;
+  z-index: 2;
+}
+
+.mobile-nav-link::before {
+  content: '';
+  position: absolute;
+  left: var(--click-x, 50%);
+  top: var(--click-y, 50%);
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+  border-radius: 50%;
+  background-color: var(--blue-electric);
+  transform: scale(0);
+  transition: transform 460ms cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mobile-nav-link:active {
+  transform: scale(0.97);
+}
+
+.mobile-nav-link.is-touch-active {
+  border-color: var(--blue-electric);
+}
+
+.mobile-nav-link.is-touch-active::before {
+  transform: scale(20);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mobile-nav-link:hover {
+    border-color: var(--blue-electric);
+  }
+
+  .mobile-nav-link:hover::before {
+    transform: scale(20);
+  }
 }
 
 /* Grid Principal do Hero */
@@ -1513,6 +1623,27 @@ button {
   pointer-events: none;
 }
 
+.callout-bar-dark .btn-primary-pill.is-touch-active {
+  background-color: transparent;
+}
+
+.callout-bar-dark .btn-primary-pill.is-touch-active::before {
+  transform: scale(14);
+}
+
+.callout-bar-dark:has(.btn-primary-pill.is-touch-active) {
+  box-shadow: 0 22px 48px rgba(50, 74, 205, 0.38);
+}
+
+.callout-bar-dark:has(.btn-primary-pill.is-touch-active) .callout-icon-circle {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+.callout-bar-dark:has(.btn-primary-pill.is-touch-active) .callout-bar-left p {
+  color: var(--white);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .callout-bar-dark .btn-primary-pill:hover {
     background-color: transparent;
@@ -1520,7 +1651,7 @@ button {
   }
 
   .callout-bar-dark .btn-primary-pill:hover::before {
-    transform: scale(10);
+    transform: scale(14);
   }
 
   .callout-bar-dark:has(.btn-primary-pill:hover) {
@@ -2380,6 +2511,23 @@ button {
   pointer-events: none;
 }
 
+.map-directions-pill.is-touch-active {
+  border-color: var(--blue-electric);
+  box-shadow: 0 14px 34px rgba(50, 74, 205, 0.42);
+}
+
+.map-directions-pill.is-touch-active .directions-arrow-circle::before {
+  transform: scale(28);
+}
+
+.map-directions-pill.is-touch-active .directions-copy span {
+  color: var(--white);
+}
+
+.map-directions-pill.is-touch-active .directions-arrow-circle svg {
+  transform: translateX(2px);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .map-directions-pill:hover {
     border-color: var(--blue-electric);
@@ -2567,6 +2715,16 @@ button {
   transform: scale(0.93);
 }
 
+.social-icon-btn.is-touch-active {
+  color: var(--blue-electric);
+  border-color: var(--white);
+  box-shadow: 0 10px 24px rgba(8, 12, 36, 0.24);
+}
+
+.social-icon-btn.is-touch-active::before {
+  transform: scale(1.08);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .social-icon-btn:hover {
     color: var(--blue-electric);
@@ -2741,11 +2899,11 @@ button {
     height: 30px;
   }
 
-  /* Hero Mobile — fiel ao 1º celular da imagem de referência */
+  /* Hero Mobile — altura maior e presença ampliada (fiel ao 1º celular da referência) */
   .hero-card {
-    padding-top: 20px;
-    padding-bottom: 24px;
-    min-height: auto;
+    padding-top: 22px;
+    padding-bottom: 26px;
+    min-height: clamp(760px, 95svh, 860px);
   }
 
   .hero-grid {
@@ -2753,15 +2911,16 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 12px;
-    padding-bottom: 76px;
-    min-height: 580px;
+    flex: 1;
+    padding-top: 18px;
+    padding-bottom: 84px;
+    min-height: 670px;
   }
 
   .hero-content {
     position: static;
     padding-bottom: 0;
-    gap: 16px;
+    gap: 18px;
     width: 100%;
   }
 
@@ -2769,10 +2928,10 @@ button {
   .hero-metrics {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 22px;
     width: 46%;
-    margin-top: 12px;
-    padding-top: 8px;
+    margin-top: 26px;
+    padding-top: 10px;
     position: relative;
     z-index: 10;
   }
@@ -2800,36 +2959,36 @@ button {
   .hero-cta-group .btn-primary-pill {
     width: 100%;
     justify-content: center;
-    padding: 17px 24px;
+    padding: 18px 24px;
     box-shadow: 0 14px 32px rgba(8, 12, 36, 0.5);
   }
 
-  /* Foto do Dr. Flávio + esfera azul + órbitas à direita no mobile */
+  /* Foto do Dr. Flávio + esfera azul concêntrica + órbitas à direita no mobile */
   .hero-visual {
     position: absolute;
-    bottom: -24px;
-    right: -28px;
-    width: 72%;
-    height: 360px;
+    bottom: -26px;
+    right: -24px;
+    width: 76%;
+    height: 430px;
     min-height: 0;
     pointer-events: none;
     z-index: 5;
   }
 
   .surgical-disc {
-    width: 230px;
-    height: 230px;
-    bottom: 44px;
+    width: 256px;
+    height: 256px;
+    bottom: 55px;
   }
 
   .orbital-system {
-    width: 310px;
-    height: 310px;
-    bottom: 4px;
+    width: 350px;
+    height: 350px;
+    bottom: 8px;
   }
 
   .doctor-cutout-img {
-    width: 265px;
+    width: 300px;
   }
 
   .glass-pill {

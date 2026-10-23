@@ -96,12 +96,14 @@ function initSmoothScroll(prefersReducedMotion) {
 }
 
 /**
- * 2. MENU MOBILE
+ * 2. MENU MOBILE — CARD EXPANDÍVEL DE NAVEGAÇÃO
  */
 function initMobileNavigation() {
   const menuBtn = document.getElementById('mobileMenuBtn');
   const drawer = document.getElementById('mobileNavDrawer');
   if (!menuBtn || !drawer) return;
+
+  const navLinks = drawer.querySelectorAll('.mobile-nav-link');
 
   const toggleMenu = (forceClose = false) => {
     const isOpen = forceClose ? false : !drawer.classList.contains('is-open');
@@ -109,12 +111,50 @@ function initMobileNavigation() {
     menuBtn.classList.toggle('is-active', isOpen);
     menuBtn.setAttribute('aria-expanded', String(isOpen));
     drawer.setAttribute('aria-hidden', String(!isOpen));
+
+    if (isOpen && typeof gsap !== 'undefined') {
+      gsap.fromTo(
+        navLinks,
+        { opacity: 0, y: -10 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.36,
+          stagger: 0.035,
+          ease: 'power3.out',
+          overwrite: 'auto',
+        }
+      );
+    }
   };
 
-  menuBtn.addEventListener('click', () => toggleMenu());
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
 
-  drawer.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => toggleMenu(true));
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      setTimeout(() => {
+        toggleMenu(true);
+      }, 220);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (
+      drawer.classList.contains('is-open') &&
+      !drawer.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      toggleMenu(true);
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+      toggleMenu(true);
+    }
   });
 }
 
@@ -799,19 +839,36 @@ function initNavLinksAnimation(prefersReducedMotion, hasFinePointer) {
 }
 
 /**
- * 11. EFEITO DE CLIQUE NOS BOTÕES "AGENDAR" E "COMO CHEGAR"
+ * 11. EFEITO DE CLIQUE E TOQUE MOBILE NOS BOTÕES DA PÁGINA
+ * No mobile/touch, aplica ao clicar os mesmos efeitos de expansão e brilho que o desktop exibe no hover.
  */
 function initInteractiveButtons() {
-  const buttons = document.querySelectorAll('.btn-outline-pill, .btn-white-pill, .map-directions-pill');
+  const buttons = document.querySelectorAll(
+    '.btn-outline-pill, .btn-white-pill, .map-directions-pill, .btn-primary-pill, .social-icon-btn, .btn-nav-circle, .mobile-nav-link'
+  );
+
   buttons.forEach((btn) => {
+    let touchTimer = null;
+
     btn.addEventListener('pointerdown', (e) => {
       const rect = btn.getBoundingClientRect();
-      btn.style.setProperty('--click-x', `${e.clientX - rect.left}px`);
-      btn.style.setProperty('--click-y', `${e.clientY - rect.top}px`);
+      const localX = `${e.clientX - rect.left}px`;
+      const localY = `${e.clientY - rect.top}px`;
+
+      btn.style.setProperty('--click-x', localX);
+      btn.style.setProperty('--click-y', localY);
+      btn.style.setProperty('--mx', localX);
+      btn.style.setProperty('--my', localY);
+
       btn.classList.remove('is-rippling');
-      // Força reflow para reiniciar a animação de onda no clique
       void btn.offsetWidth;
       btn.classList.add('is-rippling');
+
+      btn.classList.add('is-touch-active');
+      if (touchTimer) clearTimeout(touchTimer);
+      touchTimer = setTimeout(() => {
+        btn.classList.remove('is-touch-active');
+      }, 650);
     });
   });
 }
