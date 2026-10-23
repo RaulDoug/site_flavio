@@ -1,0 +1,3047 @@
+{
+ "url": "index.html",
+ "at": "2026-10-23T19:14:31.455Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.93,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 52,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 45,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 11277,
+     "screens": 12.5,
+     "words": 1154,
+     "img": 20,
+     "video": 0,
+     "canvas": 0,
+     "svg": 18,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 19,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "flavio-hero-cutout.png",
+      "caso-1-depois-sorriso.jpg",
+      "caso-3-depois-sorriso.jpg",
+      "consultorio-1.webp",
+      "caso-4-depois-sorriso.jpg",
+      "caso-2-depois-sorriso.jpg",
+      "arcada-3d.png",
+      "flavio-retrato-pb.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Dr. Flávio Saraiva Odontologia",
+     "words": 4,
+     "chars": 30,
+     "lines": 2,
+     "size": 72,
+     "vw": 5,
+     "font": "Onest",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.39,
+     "top": 317,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Dr. Flávio Saraiva Odontologia",
+     "words": 4,
+     "lines": 2,
+     "size": 72,
+     "font": "Onest"
+    },
+    "headings": [
+     {
+      "text": "Dr. Flávio Saraiva Odontologia",
+      "words": 4,
+      "chars": 30,
+      "lines": 2,
+      "size": 72,
+      "vw": 5,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 317,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "100%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 708,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "500+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 708,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Com quais queixas os pacientes me procuram",
+      "words": 7,
+      "chars": 42,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.38,
+      "top": 1155,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Odontologia de precisão para qualquer caso clínico",
+      "words": 7,
+      "chars": 50,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 2243,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Quando a estética em resina é a melhor solução",
+      "words": 9,
+      "chars": 46,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 3377,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Estética",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 244.8,
+      "vw": 17,
+      "font": "Onest",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.82,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3676,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Do diagnóstico ao novo sorriso, passo a passo",
+      "words": 8,
+      "chars": 45,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 4158,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "01",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 4324,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "02",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 4324,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "03",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": 4324,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "04",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.14,
+      "top": 4324,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "05",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 43.2,
+      "vw": 3,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.14,
+      "top": 4324,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Odontologia planejada em cada detalhe",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.46,
+      "top": 5043,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Resultados de pacientes acompanhados na clínica",
+      "words": 6,
+      "chars": 47,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.36,
+      "top": 6074,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "O que dizem os pacientes",
+      "words": 5,
+      "chars": 24,
+      "lines": 1,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 7511,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Perguntas mais frequentes",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 8236,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Estrutura preparada para cada etapa do tratamento",
+      "words": 7,
+      "chars": 49,
+      "lines": 2,
+      "size": 46,
+      "vw": 3.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 9304,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Agende a sua avaliação",
+      "words": 4,
+      "chars": 22,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 10684,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sorriso",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 273.6,
+      "vw": 19,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.78,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 11001,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 20,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Onest",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      43,
+      44,
+      46,
+      48,
+      72,
+      245,
+      274
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "Onest",
+      "size": 15,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.9
+     },
+     "measureChars": 77,
+     "max": {
+      "size": 273.6,
+      "vw": 19,
+      "font": "Onest",
+      "text": "Sorriso"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 43.2,
+      "top": 4324
+     },
+     {
+      "text": "02",
+      "size": 43.2,
+      "top": 4324
+     },
+     {
+      "text": "03",
+      "size": 43.2,
+      "top": 4324
+     },
+     {
+      "text": "04",
+      "size": 43.2,
+      "top": 4324
+     },
+     {
+      "text": "05",
+      "size": 43.2,
+      "top": 4324
+     }
+    ],
+    "color": {
+     "bodyBg": "#f5f5f5",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fafafc",
+       "top": 1025,
+       "hsl": {
+        "h": 240,
+        "s": 0.25,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2115,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e9ecf8",
+       "top": 3290,
+       "hsl": {
+        "h": 228,
+        "s": 0.52,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#324acd",
+       "top": 10552,
+       "hsl": {
+        "h": 231,
+        "s": 0.61,
+        "l": 0.5
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#525975",
+       "share": 0.52
+      },
+      {
+       "color": "#141829",
+       "share": 0.23
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#e9ebf8",
+       "share": 0.04
+      },
+      {
+       "color": "#747c99",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#7892ff",
+      "hsl": {
+       "h": 228,
+       "s": 1,
+       "l": 0.74
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "melhor solução",
+       "ratio": 2.8,
+       "need": 3,
+       "size": 46,
+       "fg": "#7b8bc4",
+       "bg": "#e9ecf8"
+      },
+      {
+       "text": "ao novo",
+       "ratio": 2.8,
+       "need": 3,
+       "size": 46,
+       "fg": "#7b8bc4",
+       "bg": "#e9ecf8"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 5,
+     "radius": "pill",
+     "height": 34,
+     "withShadow": 1,
+     "withGradient": 3,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Serviços",
+      "Sobre mim",
+      "Depoimentos",
+      "Agendar",
+      "Agendar consulta +"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 4,
+     "shadowOverlay": 19,
+     "shadowSamples": [
+      "div#heroDisc.surgical-disc → rgba(50, 74, 205, 0.55) 0px 0px 120px 0px",
+      "div#heroPillTop.glass-pill.glass-pill-top → rgba(6, 10, 30, 0.28) 0px 16px 36px 0px",
+      "div#heroPillBottom.glass-pill.glass-pill-bottom → rgba(6, 10, 30, 0.28) 0px 16px 36px 0px",
+      "footer#contato.footer-wrapper → rgba(12, 17, 51, 0.08) 0px -20px 50px 0px"
+     ],
+     "gradients": 8,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.hero-card → radial-gradient(circle at 72% 50%, rgb(23, 35, 102) 0%, rgb(12, 17, 51) 58%, rgb(8, 12, 36) 100%)",
+      "div#heroDisc.surgical-disc → radial-gradient(circle at 38% 35%, rgb(106, 130, 255) 0%, rgb(50, 74, 205) 52%, rgb(29, 47, 163) 100%)",
+      "div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)",
+      "div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)"
+     ],
+     "gradientText": 5,
+     "hairlines": 8,
+     "hairlineSamples": [
+      "div#etapas.steps-subsection 1320px",
+      "div.credential-item 733px",
+      "div.credential-item 733px",
+      "div#depoimentos.testimonials-subsection 1320px",
+      "div.contact-detail-row 733px"
+     ],
+     "outlinedBoxes": 19,
+     "dashed": 1,
+     "blurred": 11,
+     "roundedBoxes": 48,
+     "boxRadius": 24,
+     "squareMedia": 1,
+     "roundedMedia": 18,
+     "mediaRadius": 36,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3514
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4295
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 7600
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.33
+     }
+    ],
+    "nav": {
+     "links": 8,
+     "fixed": true,
+     "height": 857,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "onest"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 11277,
+    "margins": {
+     "left": 60,
+     "right": 60
+    },
+    "sections": [
+     {
+      "sel": "header#topo.hero-wrapper",
+      "tag": "header",
+      "top": 0,
+      "height": 857,
+      "words": 61,
+      "media": 1,
+      "middle": 36,
+      "heading": {
+       "text": "Dr. Flávio",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 60,
+      "right": 95,
+      "textLeft": 60,
+      "textRight": 95,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer#contato.footer-wrapper",
+      "tag": "footer",
+      "top": 10552,
+      "height": 725,
+      "words": 92,
+      "media": 0,
+      "middle": 20,
+      "heading": {
+       "text": "Agende a sua",
+       "size": 48,
+       "tag": "h2"
+      },
+      "left": 60,
+      "right": 60,
+      "textLeft": 60,
+      "textRight": 60,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Dr. Flávio Saraiva Odontologia",
+      "size": 72,
+      "top": 317,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 60,
+      "n": 19
+     },
+     {
+      "x": 666,
+      "n": 6
+     },
+     {
+      "x": 1001,
+      "n": 5
+     },
+     {
+      "x": 619,
+      "n": 4
+     },
+     {
+      "x": 639,
+      "n": 4
+     },
+     {
+      "x": 742,
+      "n": 4
+     },
+     {
+      "x": 84,
+      "n": 2
+     },
+     {
+      "x": 105,
+      "n": 2
+     },
+     {
+      "x": 134,
+      "n": 2
+     },
+     {
+      "x": 372,
+      "n": 2
+     },
+     {
+      "x": 982,
+      "n": 2
+     },
+     {
+      "x": 1027,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 73,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 720,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 51,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 44,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 13552,
+     "screens": 13.2,
+     "words": 1147,
+     "img": 20,
+     "video": 0,
+     "canvas": 0,
+     "svg": 18,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 19,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "flavio-hero-cutout.png",
+      "caso-1-depois-sorriso.jpg",
+      "caso-3-depois-sorriso.jpg",
+      "consultorio-1.webp",
+      "caso-4-depois-sorriso.jpg",
+      "caso-2-depois-sorriso.jpg",
+      "arcada-3d.png",
+      "flavio-retrato-pb.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Dr. Flávio Saraiva Odontologia",
+     "words": 4,
+     "chars": 30,
+     "lines": 2,
+     "size": 42.4,
+     "vw": 5.5,
+     "font": "Onest",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.43,
+     "top": 198,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Dr. Flávio Saraiva Odontologia",
+     "words": 4,
+     "lines": 2,
+     "size": 42.4,
+     "font": "Onest"
+    },
+    "headings": [
+     {
+      "text": "Dr. Flávio Saraiva Odontologia",
+      "words": 4,
+      "chars": 30,
+      "lines": 2,
+      "size": 42.4,
+      "vw": 5.5,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 198,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "100%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 509,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "500+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 509,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Com quais queixas os pacientes me procuram",
+      "words": 7,
+      "chars": 42,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.5,
+      "top": 1362,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Odontologia de precisão para qualquer caso clínico",
+      "words": 7,
+      "chars": 50,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.73,
+      "top": 2552,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Quando a estética em resina é a melhor solução",
+      "words": 9,
+      "chars": 46,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 3816,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Estética",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 130.6,
+      "vw": 17,
+      "font": "Onest",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.82,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4414,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Do diagnóstico ao novo sorriso, passo a passo",
+      "words": 8,
+      "chars": 45,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 4738,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "01",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 4950,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "02",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.23,
+      "top": 4950,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "03",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 4950,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "04",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 5256,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "05",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.23,
+      "top": 5256,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Odontologia planejada em cada detalhe",
+      "words": 5,
+      "chars": 37,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.59,
+      "top": 6748,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Resultados de pacientes acompanhados na clínica",
+      "words": 6,
+      "chars": 47,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.47,
+      "top": 7575,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "O que dizem os pacientes",
+      "words": 5,
+      "chars": 24,
+      "lines": 1,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 8966,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Perguntas mais frequentes",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 9774,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Estrutura preparada para cada etapa do tratamento",
+      "words": 7,
+      "chars": 49,
+      "lines": 2,
+      "size": 32,
+      "vw": 4.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 10966,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Agende a sua avaliação",
+      "words": 4,
+      "chars": 22,
+      "lines": 2,
+      "size": 35.2,
+      "vw": 4.6,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 12699,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sorriso",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 145.9,
+      "vw": 19,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.78,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 13322,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 20,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Onest",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      32,
+      34,
+      35,
+      36,
+      42,
+      131,
+      146
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "Onest",
+      "size": 15,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.9
+     },
+     "measureChars": 77,
+     "max": {
+      "size": 145.9,
+      "vw": 19,
+      "font": "Onest",
+      "text": "Sorriso"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 36,
+      "top": 4950
+     },
+     {
+      "text": "02",
+      "size": 36,
+      "top": 4950
+     },
+     {
+      "text": "03",
+      "size": 36,
+      "top": 4950
+     },
+     {
+      "text": "04",
+      "size": 36,
+      "top": 5256
+     },
+     {
+      "text": "05",
+      "size": 36,
+      "top": 5256
+     }
+    ],
+    "color": {
+     "bodyBg": "#f5f5f5",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fafafc",
+       "top": 1271,
+       "hsl": {
+        "h": 240,
+        "s": 0.25,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2463,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e9ecf8",
+       "top": 3768,
+       "hsl": {
+        "h": 228,
+        "s": 0.52,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#324acd",
+       "top": 12605,
+       "hsl": {
+        "h": 231,
+        "s": 0.61,
+        "l": 0.5
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#525975",
+       "share": 0.52
+      },
+      {
+       "color": "#141829",
+       "share": 0.23
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#e9ebf8",
+       "share": 0.04
+      },
+      {
+       "color": "#747c99",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#324acd",
+      "hsl": {
+       "h": 231,
+       "s": 0.61,
+       "l": 0.5
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "melhor solução",
+       "ratio": 2.8,
+       "need": 3,
+       "size": 32,
+       "fg": "#7b8bc4",
+       "bg": "#e9ecf8"
+      },
+      {
+       "text": "ao novo",
+       "ratio": 2.8,
+       "need": 3,
+       "size": 32,
+       "fg": "#7b8bc4",
+       "bg": "#e9ecf8"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 58,
+     "withShadow": 1,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Agendar",
+      "Agendar consulta +"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 4,
+     "shadowOverlay": 19,
+     "shadowSamples": [
+      "div#heroDisc.surgical-disc → rgba(50, 74, 205, 0.55) 0px 0px 120px 0px",
+      "div#heroPillTop.glass-pill.glass-pill-top → rgba(6, 10, 30, 0.28) 0px 16px 36px 0px",
+      "div#heroPillBottom.glass-pill.glass-pill-bottom → rgba(6, 10, 30, 0.28) 0px 16px 36px 0px",
+      "footer#contato.footer-wrapper → rgba(12, 17, 51, 0.08) 0px -20px 50px 0px"
+     ],
+     "gradients": 8,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.hero-card → radial-gradient(circle at 72% 50%, rgb(23, 35, 102) 0%, rgb(12, 17, 51) 58%, rgb(8, 12, 36) 100%)",
+      "div#heroDisc.surgical-disc → radial-gradient(circle at 38% 35%, rgb(106, 130, 255) 0%, rgb(50, 74, 205) 52%, rgb(29, 47, 163) 100%)",
+      "div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)",
+      "div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 8,
+     "hairlineSamples": [
+      "div#etapas.steps-subsection 704px",
+      "div.credential-item 704px",
+      "div.credential-item 704px",
+      "div#depoimentos.testimonials-subsection 704px",
+      "div.contact-detail-row 704px"
+     ],
+     "outlinedBoxes": 19,
+     "dashed": 1,
+     "blurred": 11,
+     "roundedBoxes": 48,
+     "boxRadius": 24,
+     "squareMedia": 1,
+     "roundedMedia": 18,
+     "mediaRadius": 36,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4042
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4921
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 9040
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.22
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 1103,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "onest"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 13552,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "header#topo.hero-wrapper",
+      "tag": "header",
+      "top": 0,
+      "height": 1103,
+      "words": 54,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Dr. Flávio",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer#contato.footer-wrapper",
+      "tag": "footer",
+      "top": 12605,
+      "height": 947,
+      "words": 93,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Agende a sua",
+       "size": 35,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 87,
+      "textLeft": 32,
+      "textRight": 87,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Dr. Flávio Saraiva Odontologia",
+      "size": 42,
+      "top": 198,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 27
+     },
+     {
+      "x": 51,
+      "n": 14
+     },
+     {
+      "x": 400,
+      "n": 6
+     },
+     {
+      "x": 418,
+      "n": 4
+     },
+     {
+      "x": 77,
+      "n": 3
+     },
+     {
+      "x": 254,
+      "n": 2
+     },
+     {
+      "x": 317,
+      "n": 2
+     },
+     {
+      "x": 61,
+      "n": 1
+     },
+     {
+      "x": 116,
+      "n": 1
+     },
+     {
+      "x": 188,
+      "n": 1
+     },
+     {
+      "x": 207,
+      "n": 1
+     },
+     {
+      "x": 220,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 72,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.87,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 46,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 39,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 10994,
+     "screens": 13,
+     "words": 1066,
+     "img": 20,
+     "video": 0,
+     "canvas": 0,
+     "svg": 18,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 19,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "flavio-hero-cutout.png",
+      "caso-1-depois-sorriso.jpg",
+      "caso-3-depois-sorriso.jpg",
+      "consultorio-1.webp",
+      "caso-4-depois-sorriso.jpg",
+      "caso-2-depois-sorriso.jpg",
+      "arcada-3d.png",
+      "flavio-retrato-pb.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 4,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Dr. Flávio Saraiva Odontologia",
+     "words": 4,
+     "chars": 30,
+     "lines": 2,
+     "size": 42.4,
+     "vw": 10.9,
+     "font": "Onest",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.06,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 150,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Dr. Flávio Saraiva Odontologia",
+     "words": 4,
+     "lines": 2,
+     "size": 42.4,
+     "font": "Onest"
+    },
+    "headings": [
+     {
+      "text": "Dr. Flávio Saraiva Odontologia",
+      "words": 4,
+      "chars": 30,
+      "lines": 2,
+      "size": 42.4,
+      "vw": 10.9,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 150,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "100%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 365,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "500+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 473,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Com quais queixas os pacientes me procuram",
+      "words": 7,
+      "chars": 42,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 886,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Odontologia de precisão para qualquer caso clínico",
+      "words": 7,
+      "chars": 50,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1826,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Quando a estética em resina é a melhor solução",
+      "words": 9,
+      "chars": 46,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2775,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Estética",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 88,
+      "vw": 22.6,
+      "font": "Onest",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 0.82,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3206,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Do diagnóstico ao novo sorriso, passo a passo",
+      "words": 8,
+      "chars": 45,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 3573,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "01",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.64,
+      "top": 3807,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "02",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.64,
+      "top": 3807,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "03",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.64,
+      "top": 3807,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "04",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.64,
+      "top": 3807,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "05",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.64,
+      "top": 3807,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Odontologia planejada em cada detalhe",
+      "words": 5,
+      "chars": 37,
+      "lines": 3,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4805,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Resultados de pacientes acompanhados na clínica",
+      "words": 6,
+      "chars": 47,
+      "lines": 4,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5750,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "O que dizem os pacientes",
+      "words": 5,
+      "chars": 24,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6662,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Perguntas mais frequentes",
+      "words": 3,
+      "chars": 25,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.57,
+      "top": 7335,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Estrutura preparada para cada etapa do tratamento",
+      "words": 7,
+      "chars": 49,
+      "lines": 4,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8394,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Agende a sua avaliação",
+      "words": 4,
+      "chars": 22,
+      "lines": 2,
+      "size": 35.2,
+      "vw": 9,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 10124,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sorriso",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 88,
+      "vw": 22.6,
+      "font": "Onest",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.78,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 10790,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 20,
+     "maxLines": 4,
+     "over2Lines": 6,
+     "statements": 0,
+     "centered": 4,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Onest",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      32,
+      34,
+      35,
+      36,
+      42,
+      88
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Onest",
+      "size": 15,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 5.9
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 88,
+      "vw": 22.6,
+      "font": "Onest",
+      "text": "Estética"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 36,
+      "top": 3807
+     },
+     {
+      "text": "02",
+      "size": 36,
+      "top": 3807
+     },
+     {
+      "text": "03",
+      "size": 36,
+      "top": 3807
+     },
+     {
+      "text": "04",
+      "size": 36,
+      "top": 3807
+     },
+     {
+      "text": "05",
+      "size": 36,
+      "top": 3807
+     }
+    ],
+    "color": {
+     "bodyBg": "#f5f5f5",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.96
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fafafc",
+       "top": 794,
+       "hsl": {
+        "h": 240,
+        "s": 0.25,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 1736,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#e9ecf8",
+       "top": 2727,
+       "hsl": {
+        "h": 228,
+        "s": 0.52,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#324acd",
+       "top": 10030,
+       "hsl": {
+        "h": 231,
+        "s": 0.61,
+        "l": 0.5
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#525975",
+       "share": 0.49
+      },
+      {
+       "color": "#141829",
+       "share": 0.25
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#e9ebf8",
+       "share": 0.04
+      },
+      {
+       "color": "#747c99",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#324acd",
+      "hsl": {
+       "h": 231,
+       "s": 0.61,
+       "l": 0.5
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "melhor solução",
+       "ratio": 2.8,
+       "need": 3,
+       "size": 32,
+       "fg": "#7b8bc4",
+       "bg": "#e9ecf8"
+      },
+      {
+       "text": "ao novo",
+       "ratio": 2.8,
+       "need": 3,
+       "size": 32,
+       "fg": "#7b8bc4",
+       "bg": "#e9ecf8"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 42,
+     "withShadow": 2,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Agendar",
+      "Agendar consulta +"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 3,
+     "shadowOverlay": 19,
+     "shadowSamples": [
+      "a.btn-primary-pill → rgba(8, 12, 36, 0.5) 0px 14px 32px 0px",
+      "div#heroDisc.surgical-disc → rgba(50, 74, 205, 0.55) 0px 0px 120px 0px",
+      "footer#contato.footer-wrapper → rgba(12, 17, 51, 0.08) 0px -20px 50px 0px"
+     ],
+     "gradients": 8,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.hero-card → radial-gradient(circle at 72% 50%, rgb(23, 35, 102) 0%, rgb(12, 17, 51) 58%, rgb(8, 12, 36) 100%)",
+      "div#heroDisc.surgical-disc → radial-gradient(circle at 38% 35%, rgb(106, 130, 255) 0%, rgb(50, 74, 205) 52%, rgb(29, 47, 163) 100%)",
+      "div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)",
+      "div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 9,
+     "hairlineSamples": [
+      "div#etapas.steps-subsection 350px",
+      "div.credential-item 350px",
+      "div.credential-item 350px",
+      "div#depoimentos.testimonials-subsection 350px",
+      "div.contact-detail-row 350px"
+     ],
+     "outlinedBoxes": 19,
+     "dashed": 1,
+     "blurred": 9,
+     "roundedBoxes": 52,
+     "boxRadius": 32,
+     "squareMedia": 1,
+     "roundedMedia": 18,
+     "mediaRadius": 32,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1236
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3036
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3778
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6770
+      },
+      {
+       "count": 3,
+       "iconTopped": true,
+       "rounded": true,
+       "top": 7522
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.22
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 696,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "onest"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 10994,
+    "margins": {
+     "left": 8,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "header#topo.hero-wrapper",
+      "tag": "header",
+      "top": 0,
+      "height": 696,
+      "words": 41,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Dr. Flávio",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer#contato.footer-wrapper",
+      "tag": "footer",
+      "top": 10030,
+      "height": 964,
+      "words": 93,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Agende a sua",
+       "size": 35,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Dr. Flávio Saraiva Odontologia",
+      "size": 42,
+      "top": 150,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Facetas em resina composta",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Harmonização completa de cor, textura e volume den",
+      "side": "left",
+      "px": 8
+     },
+     {
+      "text": "Depois",
+      "side": "right",
+      "px": 12
+     }
+    ],
+    "edges": [
+     {
+      "x": 20,
+      "n": 25
+     },
+     {
+      "x": 39,
+      "n": 13
+     },
+     {
+      "x": 220,
+      "n": 3
+     },
+     {
+      "x": 8,
+      "n": 2
+     },
+     {
+      "x": 90,
+      "n": 2
+     },
+     {
+      "x": 168,
+      "n": 2
+     },
+     {
+      "x": 316,
+      "n": 2
+     },
+     {
+      "x": 332,
+      "n": 2
+     },
+     {
+      "x": 345,
+      "n": 2
+     },
+     {
+      "x": 624,
+      "n": 2
+     },
+     {
+      "x": 640,
+      "n": 2
+     },
+     {
+      "x": 932,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 67,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"02\", \"03\", \"04\", \"05\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "8 gradient fill(s): div.hero-card → radial-gradient(circle at 72% 50%, rgb(23, 35, 102) 0%, rgb(12, 17, 51) 58%, rgb(8, 12, 36) 100%) | div#heroDisc.surgical-disc → radial-gradient(circle at 38% 35%, rgb(106, 130, 255) 0%, rgb(50, 74, 205) 52%, rgb(29, 47, 163) 100%) | div.fan-card-overlay → linear-gradient(rgba(12, 17, 51, 0.65) 0%, rgba(12, 17, 51, 0.05) 45%, rgba(12, 17, 51, 0.35) 100%)",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient-text",
+   "width": 1440,
+   "message": "5 gradient-filled text element(s).",
+   "fix": "Solid colour text."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "4 box-shadow(s) on elements at rest: div#heroDisc.surgical-disc → rgba(50, 74, 205, 0.55) 0px 0px 120px 0px | div#heroPillTop.glass-pill.glass-pill-top → rgba(6, 10, 30, 0.28) 0px 16px 36px 0px | div#heroPillBottom.glass-pill.glass-pill-bottom → rgba(6, 10, 30, 0.28) 0px 16px 36px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with gradient fill and shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "8 thin rule(s)/divider line(s): div#etapas.steps-subsection 1320px | div.credential-item 733px | div.credential-item 733px | div#depoimentos.testimonials-subsection 1320px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "19 boxes drawn with a 1px outline.",
+   "fix": "Define a surface by its fill (one tone step from the page) or leave the content unboxed.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "dashed",
+   "width": 1440,
+   "message": "1 dashed/dotted border(s).",
+   "fix": "Remove unless it is a real drop zone.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 1440,
+   "message": "11 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "3 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"melhor solução\" 2.8:1 needs 3:1; \"ao novo\" 2.8:1 needs 3:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "13 different font sizes (13, 14, 15, 16, 17, 18, 43, 44, 46, 48, 72, 245, 274).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15px.",
+   "fix": "Body copy 16–20px.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "grey-body",
+   "width": 1440,
+   "message": "The running text is a soft grey on its ground (5.9:1).",
+   "fix": "Set body copy in the full ink (7:1 or more). Keep the muted ink for secondary notes; pages read thin and unfinished when everything is grey.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 12 different lines (60px, 666px, 1001px, 619px, 639px, 742px, 84px); the three most used hold only 41% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"Dr. Flávio Saraiva Odontologia\" (screen 12, 100% hidden); \"Dr. Flávio\" (screen 12, 100% hidden); \"100\" (screen 12, 100% hidden); \"500\" (screen 12, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "pinned-over-picture",
+   "width": 1440,
+   "message": "Pinned large text slides across pictures while the page scrolls: \"100\" (screen 12, 100% over a picture); \"500\" (screen 12, 100% over a picture); \"Com quais queixas os pacientes me procuram\" (screen 12, 100% over a picture)",
+   "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "long-pin",
+   "width": 1440,
+   "message": "The same large text stays on screen for 12 screens in a row: \"Dr. Flávio Saraiva Odontologia\"; \"Com quais queixas os pacientes me procuram\"",
+   "fix": "A pinned element earns two screens, and something must change at each. Shorten the run or give every screen its own content."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "6 headline(s) wrap past two lines at 390px: \"Com quais queixas os pacientes me procuram\" → 3 lines (7 words, 32px); \"Odontologia de precisão para qualquer caso clíni\" → 3 lines (7 words, 32px); \"Quando a estética em resina é a melhor solução\" → 3 lines (9 words, 32px); \"Odontologia planejada em cada detalhe\" → 3 lines (5 words, 32px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "icon-cards",
+   "width": 390,
+   "message": "1 row(s) of identical cards each topped with a small icon (3 cards).",
+   "fix": "Replace with one composed section from the direction: a narrative split, a list set in large type, or real imagery per item."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 390,
+   "message": "4 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 8px on the left, 20px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 390,
+   "message": "2 text block(s) sit within 12px of the screen edge: \"Facetas em resina composta\" (8px from the left); \"Harmonização completa de cor, \" (8px from the left)",
+   "fix": "Keep text inside the page margin (16–20px). Only display type deliberately bled past the edge may touch it."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\desktop-page-02.jpg",
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\tablet-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\mobile-page-01.jpg",
+    "C:\\Users\\User\\Desktop\\Projetos\\site_flavio\\.taste-skill\\inspect\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
