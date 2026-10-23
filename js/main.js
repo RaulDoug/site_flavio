@@ -688,6 +688,7 @@ function initFaqAccordion() {
  * 8. ANIMAÇÃO DE SCROLL: CARD SEGUINTE COBRINDO O CARD ANTERIOR (STACKING CARDS)
  * Cada seção trava ao final de sua leitura (com trecho de pausa visível via margin-bottom)
  * e permanece 100% full-width (sem scale que gere borda lateral) enquanto o próximo card sobe por cima.
+ * No mobile, evita recalcular durante a variação da barra de endereço e oculta da GPU cards já 100% cobertos.
  */
 function initStackingCardsScroll() {
   const stackCards = [
@@ -698,8 +699,10 @@ function initStackingCardsScroll() {
 
   if (stackCards.length < 2) return;
 
+  let lastWindowWidth = window.innerWidth;
+
   const updateStickyOffsets = () => {
-    const vh = window.innerHeight;
+    const vh = document.documentElement.clientHeight || window.innerHeight;
     stackCards.forEach((card, idx) => {
       if (idx === stackCards.length - 1) return;
       const cardHeight = card.offsetHeight;
@@ -710,12 +713,44 @@ function initStackingCardsScroll() {
     if (typeof ScrollTrigger !== 'undefined') {
       ScrollTrigger.refresh();
     }
+    cullCoveredCards();
+  };
+
+  // Libera memória de textura da GPU para seções anteriores que já foram 100% cobertas pela seção seguinte
+  let rafPending = false;
+  const cullCoveredCards = () => {
+    rafPending = false;
+    for (let i = 0; i < stackCards.length - 1; i++) {
+      const nextCard = stackCards[i + 1];
+      const nextRect = nextCard.getBoundingClientRect();
+      // Quando o próximo card já subiu até o topo da tela (<= 2px), o card anterior está 100% coberto por baixo
+      const isCompletelyCovered = nextRect.top <= 2;
+      stackCards[i].classList.toggle('is-covered-card', isCompletelyCovered);
+    }
+  };
+
+  const onScrollCull = () => {
+    if (!rafPending) {
+      rafPending = true;
+      window.requestAnimationFrame(cullCoveredCards);
+    }
   };
 
   updateStickyOffsets();
   window.addEventListener('load', updateStickyOffsets);
-  window.addEventListener('resize', updateStickyOffsets);
+  window.addEventListener('orientationchange', () => {
+    setTimeout(updateStickyOffsets, 180);
+  });
+  window.addEventListener('resize', () => {
+    // No mobile, ignora o resize disparado apenas pela barra de endereço escondendo/aparecendo no scroll
+    const currentWidth = window.innerWidth;
+    if (Math.abs(currentWidth - lastWindowWidth) > 2) {
+      lastWindowWidth = currentWidth;
+      updateStickyOffsets();
+    }
+  });
   window.addEventListener('updateStickyCards', updateStickyOffsets);
+  window.addEventListener('scroll', onScrollCull, { passive: true });
 }
 
 /**
@@ -733,15 +768,26 @@ function initScrollReveals(prefersReducedMotion) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          const isMobile = window.innerWidth < 768;
+          const isHorizontalSnapItem =
+            isMobile &&
+            entry.target.matches('.indication-card, .step-card, .case-card, .testimonial-card');
+
+          if (isHorizontalSnapItem) {
+            observer.unobserve(entry.target);
+            return;
+          }
+
           gsap.fromTo(
             entry.target,
-            { y: 22, opacity: 0.75 },
+            { y: 20, opacity: 0.82 },
             {
               y: 0,
               opacity: 1,
-              duration: 0.65,
+              duration: 0.6,
               ease: 'power3.out',
               overwrite: 'auto',
+              clearProps: 'transform,opacity',
             }
           );
           observer.unobserve(entry.target);

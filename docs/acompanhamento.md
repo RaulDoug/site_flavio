@@ -257,6 +257,10 @@ site_flavio/
      - Atualizado `initInteractiveButtons()` em `js/main.js` e as regras `.is-touch-active` em `css/styles.css` para que, ao clicar/tocar nos botões no celular, ocorram os mesmos efeitos visuais do hover no desktop (expansão azul nos botões `"Agendar"`, `"Receber avaliação"`, `"Como chegar"` e `"Agendar pelo WhatsApp"`, glow e borda luminosa no CTA do Hero, e expansão branca com transição de ícone para azul no Instagram e Facebook).
   3. **Reversão da Altura do Hero no Mobile (`@media (max-width: 767px)`):**
      - Revertida a altura do `.hero-card` no mobile para o valor original (`min-height: auto`, `.hero-grid` com `min-height: 580px` e padding ajustado), restaurando as proporções anteriores da foto do Dr. Flávio (`width: 265px`), do disco cirúrgico (`230px`), órbitas (`310px`) e enquadramento compacto fiel ao design de referência.
+  4. **Otimização de GPU Mobile mantendo 100% do Efeito de Stacking Cards (`#casos` e Rolagem):**
+     - Implementado *GPU Culling* (`cullCoveredCards` em `initStackingCardsScroll` + classe `.is-covered-card`) que aplica `visibility: hidden` e pausa animações CSS nas seções anteriores **apenas depois que a seção seguinte já cobriu 100% da tela**, mantendo o efeito visual de empilhamento idêntico no celular, mas liberando a memória gráfica da GPU (no máximo 2 seções ativas por vez).
+     - Ignorados eventos de `resize` causados apenas pela barra de endereço do navegador mobile escondendo/aparecendo durante o scroll (`Math.abs(currentWidth - lastWindowWidth) > 2`), eliminando saltos de `top` nas transições de seção.
+     - Adicionado `backface-visibility: hidden` + `transform: translateZ(0)`, `decoding="async"` nas fotos de `#casos` e remoção de `transform` em itens de carrossel horizontal (`scroll-snap`) no mobile.
 - **Skills utilizadas:**
   - `mobile-native`, `animate`, `animation-performance`, `apple-design`, `emil-design-eng`, `impeccable`.
 - **Arquivos criados/modificados:**
