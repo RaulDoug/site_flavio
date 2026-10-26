@@ -28,45 +28,60 @@ site_flavio/
 ├── .codex/                               # Configurações auxiliares de agentes
 ├── .impeccable/                          # Configurações da skill impeccable
 ├── assets/
-│   └── images/                           # Ativos visuais processados e otimizados para produção
-│       ├── arcada-3d.png                 # Render 3D recortado para a seção orbital de especialidades
-│       ├── caso-1-antes-depois.jpg       # Caso clínico real 1 (original)
-│       ├── caso-1-antes-sorriso.jpg      # Caso 1 — recorte focado no sorriso (Antes)
-│       ├── caso-1-antes.jpg              # Caso 1 — rosto completo (Antes)
-│       ├── caso-1-depois-sorriso.jpg     # Caso 1 — recorte focado no sorriso (Depois)
-│       ├── caso-1-depois.jpg             # Caso 1 — rosto completo (Depois)
-│       ├── caso-2-antes-depois.jpg       # Caso clínico real 2 (original)
-│       ├── caso-2-antes-sorriso.jpg      # Caso 2 — recorte focado no sorriso (Antes)
-│       ├── caso-2-antes.jpg              # Caso 2 — rosto completo (Antes)
-│       ├── caso-2-depois-sorriso.jpg     # Caso 2 — recorte focado no sorriso (Depois)
-│       ├── caso-2-depois.jpg             # Caso 2 — rosto completo (Depois)
-│       ├── caso-3-antes-depois.jpg       # Caso clínico real 3 (original)
-│       ├── caso-3-antes-sorriso.jpg      # Caso 3 — recorte focado no sorriso (Antes)
-│       ├── caso-3-antes.jpg              # Caso 3 — rosto completo (Antes)
-│       ├── caso-3-depois-sorriso.jpg     # Caso 3 — recorte focado no sorriso (Depois)
-│       ├── caso-3-depois.jpg             # Caso 3 — rosto completo (Depois)
-│       ├── caso-4-antes-depois.jpg       # Caso clínico real 4 (original)
-│       ├── caso-4-antes-sorriso.jpg      # Caso 4 — recorte focado no sorriso (Antes)
-│       ├── caso-4-antes.jpg              # Caso 4 — rosto completo (Antes)
-│       ├── caso-4-depois-sorriso.jpg     # Caso 4 — recorte focado no sorriso (Depois)
-│       ├── caso-4-depois.jpg             # Caso 4 — rosto completo (Depois)
-│       ├── consultorio-1.webp            # Foto real da estrutura interna do consultório 1
-│       ├── consultorio-2.webp            # Foto real da estrutura interna do consultório 2
-│       ├── consultorio-3.webp            # Foto real da estrutura interna do consultório 3
-│       ├── consultorio-fachada.webp      # Foto real da fachada no Centro de Bom Despacho
-│       ├── favicon.svg                   # Favicon vetorial na paleta da marca
-│       ├── flavio-hero-cutout.png        # Foto do Dr. Flávio com fundo removido via IA (canal alfa)
-│       ├── flavio-jaleco-2.jpg           # Foto profissional com jaleco para seção Sobre Mim
-│       ├── flavio-jaleco-hero.jpg        # Foto original base do Hero
-│       ├── flavio-retrato-pb.jpg         # Retrato institucional em P&B
-│       ├── logo-banner.jpg               # Banner com logotipo
-│       ├── logo-flavio-branca-crop.png   # Logotipo branco recortado sem margens vazias
-│       ├── logo-flavio-branca.png        # Logotipo branco original
-│       └── logo-flavio-marinho-crop.png  # Variante do logotipo em Azul Marinho (#0C1133)
+│   ├── images/                           # Ativos visuais processados e otimizados para produção
+│   │   ├── arcada-3d.png                 # Modelo antigo com implante (substituído pelo novo modelo abaixo)
+│   │   ├── caso-1-antes-depois.jpg       # Caso clínico real 1 (original)
+│   │   ├── caso-1-antes-sorriso.jpg      # Caso 1 — recorte focado no sorriso (Antes)
+│   │   ├── caso-1-antes.jpg              # Caso 1 — rosto completo (Antes)
+│   │   ├── caso-1-depois-sorriso.jpg     # Caso 1 — recorte focado no sorriso (Depois)
+│   │   ├── caso-1-depois.jpg             # Caso 1 — rosto completo (Depois)
+│   │   ├── caso-2-antes-depois.jpg       # Caso clínico real 2 (original)
+│   │   ├── caso-2-antes-sorriso.jpg      # Caso 2 — recorte focado no sorriso (Antes)
+│   │   ├── caso-2-antes.jpg              # Caso 2 — rosto completo (Antes)
+│   │   ├── caso-2-depois-sorriso.jpg     # Caso 2 — recorte focado no sorriso (Depois)
+│   │   ├── caso-2-depois.jpg             # Caso 2 — rosto completo (Depois)
+│   │   ├── caso-3-antes-depois.jpg       # Caso clínico real 3 (original)
+│   │   ├── caso-3-antes-sorriso.jpg      # Caso 3 — recorte focado no sorriso (Antes)
+│   │   ├── caso-3-antes.jpg              # Caso 3 — rosto completo (Antes)
+│   │   ├── caso-3-depois-sorriso.jpg     # Caso 3 — recorte focado no sorriso (Depois)
+│   │   ├── caso-3-depois.jpg             # Caso 3 — rosto completo (Depois)
+│   │   ├── caso-4-antes-depois.jpg       # Caso clínico real 4 (original)
+│   │   ├── caso-4-antes-sorriso.jpg      # Caso 4 — recorte focado no sorriso (Antes)
+│   │   ├── caso-4-antes.jpg              # Caso 4 — rosto completo (Antes)
+│   │   ├── caso-4-depois-sorriso.jpg     # Caso 4 — recorte focado no sorriso (Depois)
+│   │   ├── caso-4-depois.jpg             # Caso 4 — rosto completo (Depois)
+│   │   ├── consultorio-1.webp            # Foto real da estrutura interna do consultório 1
+│   │   ├── consultorio-2.webp            # Foto real da estrutura interna do consultório 2
+│   │   ├── consultorio-3.webp            # Foto real da estrutura interna do consultório 3
+│   │   ├── consultorio-fachada.webp      # Foto real da fachada no Centro de Bom Despacho
+│   │   ├── faceta-lente-3d.png           # [NOVO] Render 3D Exploded View de Arcada Superior Completa com 6 Facetas/Lentes em resina sem desgaste (fundo alfa transparente)
+│   │   ├── favicon.svg                   # Favicon vetorial na paleta da marca
+│   │   ├── flavio-hero-cutout.png        # Foto do Dr. Flávio com fundo removido via IA (canal alfa)
+│   │   ├── flavio-jaleco-2.jpg           # Foto profissional de jaleco (card central do carrossel em leque)
+│   │   ├── flavio-jaleco-hero.jpg        # Foto original base do Hero
+│   │   ├── flavio-retrato-pb.jpg         # Retrato institucional em P&B para Sobre Mim
+│   │   ├── logo-banner.jpg               # Banner com logotipo
+│   │   ├── logo-flavio-branca-crop.png   # Logotipo branco recortado sem margens vazias
+│   │   ├── logo-flavio-branca.png        # Logotipo branco original
+│   │   ├── logo-flavio-marinho-crop.png  # Variante do logotipo em Azul Marinho (#0C1133)
+│   │   ├── poster-ana-luiza.webp         # Capa ultraleve WebP do vídeo 1 (Ana Luiza - 20 KB)
+│   │   ├── poster-diego.webp             # Capa ultraleve WebP do vídeo 2 (Diego - 8 KB)
+│   │   └── poster-fael.webp              # Capa ultraleve WebP do vídeo 3 (Fael sorrindo em 00:02:26.5 - 13 KB)
+│   └── videos/                           # Vídeos reais otimizados para web e originais
+│       ├── depoimento_cliente_flavio_insta.mp4      # Reel original Instagram Fael
+│       ├── depoimento_paciente_2_flavio_insta.mp4   # Depoimento original Instagram Diego
+│       ├── sorriso_merece_o_melhor_flavio_insta.mp4 # Take macro original (descartado por marca CapCut)
+│       ├── video_promo_flavio_insta.mp4             # Vídeo original Instagram Ana Luiza
+│       ├── video-ana-luiza-web.mp4                  # [OTIMIZADO] Vídeo 1 H.264 High faststart para web
+│       ├── video-diego-web.mp4                      # [OTIMIZADO] Vídeo 2 aparado (sem tela cinza) faststart
+│       └── video-fael-web.mp4                       # [OTIMIZADO] Vídeo 3 comprimido com faststart para web
 ├── css/
-│   └── styles.css                        # Design System completo, layout responsivo e micro-interações
+│   └── styles.css                        # Design System completo, layout responsivo e Cinema Grid 9:16
 ├── js/
-│   └── main.js                           # Motor de animações GSAP, parallax no cursor, carrossel em leque e UI
+│   └── main.js                           # Motor GSAP, Parallax orbital 3D e player interativo Click-to-Stream
+├── scripts/
+│   ├── process_3d_render.py              # Script de remoção de fundo com rembg e otimização do render 3D
+│   └── process_videos.py                 # Pipeline FFmpeg de compressão de vídeos e extração de posters WebP
 ├── docs/
 │   ├── images/
 │   │   ├── clientes/                     # 4 fotos de casos reais (Antes e Depois)
@@ -267,6 +282,94 @@ site_flavio/
   - `index.html` (modificado)
   - `css/styles.css` (modificado)
   - `js/main.js` (modificado)
+  - `docs/acompanhamento.md` (atualizado)
+
+### [2026-10-26] — Etapa 8: Análise Estratégica de Reposicionamento para Facetas/Lentes em Resina, Substituição do Modelo 3D e Curadoria dos Vídeos do Instagram
+- **O que foi feito:**
+  1. **Diagnóstico Completo de Posicionamento de Marca Pessoal e Produto Principal (Facetas / Lentes em Resina):**
+     - Análise seção por seção (`#topo`, `#servicos`, `#especialidades`, `#indicacoes`, `#etapas`, `#sobre`, `#casos`, `#depoimentos`, `#duvidas`, `#clinica`, `#contato`) para migrar a narrativa de um consultório odontológico generalista para um posicionamento de especialista em **Facetas / Lentes em Resina Composta (Estética Natural e Sem Desgaste)**.
+  2. **Estudo de Substituição do Modelo 3D da Arcada com Implante (`#especialidades`):**
+     - Mapeadas 3 alternativas visuais de alto padrão alinhadas ao mercado de estética dental e facetas/lentes (eliminando o parafuso de implante cirúrgico de `arcada-3d.png`, que pertencia ao nicho de implantodontia da referência original).
+  3. **Inspeção e Curadoria Técnica/Criativa dos 4 Vídeos Reais em `assets/videos/`:**
+     - `video_promo_flavio_insta.mp4` (`00:38`, paciente Ana Luiza — Caso 3);
+     - `depoimento_paciente_2_flavio_insta.mp4` (`00:52`, paciente Diego — Caso 1, reabilitação/retrabalho de facetas insatisfatórias feitas anteriormente com outro profissional);
+     - `depoimento_cliente_flavio_insta.mp4` (`02:31`, influenciador Fael `@faelzueira`, jornada em 3 etapas: gengivoplastia + arcada superior + arcada inferior, zero desgaste dental);
+     - `sorriso_merece_o_melhor_flavio_insta.mp4` (`00:11`, take macro de polimento, com observação sobre marca d'água CapCut e tela duplicada).
+  4. **Proposta de Arquitetura e Design para Integração de Vídeos no Site:**
+     - Definição das opções de formato 9:16 nativo em harmonia com o Design System (cards arredondados `32px–40px`, reprodução silenciosa em preview loop + expansão com áudio sob demanda, conexão direta entre Caso Fotográfico e Vídeo Real do mesmo paciente).
+- **Skills utilizadas:**
+  - `design-taste-frontend`, `impeccable`, `emil-design-eng`, `apple-design`.
+- **Arquivos criados/modificados:**
+  - `docs/acompanhamento.md` (atualizado — nenhum arquivo de código alterado nesta etapa de definição estratégica, conforme solicitado pelo usuário).
+
+### [2026-10-26] — Etapa 9: Implementação do Reposicionamento para Facetas em Resina, Novo Modelo 3D (Opção A) e Cinema Grid 9:16 de Vídeos Reais
+- **O que foi feito:**
+  1. **Reposicionamento Editorial e de Marca em Todas as Seções (`index.html`):**
+     - **`<head>` & SEO:** Atualizados títulos e meta tags destacando Facetas e Lentes em Resina Composta sem desgaste dental (CRO-MG 75116).
+     - **Hero (`#topo`):** Mantido o `<h1>` institucional com foco claro em facetas no selo superior (`Facetas em Resina & Estética Dental · CRO-MG 75116`), subtítulo e nas pílulas flutuantes de vidro (*"Técnica conservadora · sem desgaste dental invasivo"* e *"Facetas em Resina · estratificação e aspecto natural"*).
+     - **Carrossel em Leque (`#servicos`):** 5 queixas mapeadas para o universo das facetas, com o card central de destaque (`data-index="2"`) atualizado com a foto do Dr. Flávio de jaleco ([`assets/images/flavio-jaleco-2.jpg`](file:///c:/Users/User/Desktop/Projetos/site_flavio/assets/images/flavio-jaleco-2.jpg)), gerando conexão humana imediata no centro do leque.
+     - **Indicações + Marca d'Água Gigante (`#indicacoes`):** Palavra arquitetônica atualizada de `"Estética"` para `"Facetas"`, com cards focados em dente intacto, translucidez e troca de resinas antigas.
+     - **As 5 Etapas (`#etapas`):** Jornada clínica alinhada às facetas (`01. Avaliação e escuta` -> `02. Análise facial e estética` -> `03. Preparo da base` -> `04. Escultura das facetas` -> `05. Polimento espelhado`).
+     - **Sobre Mim (`#sobre`):** Inclusão da filosofia real dita pelo Dr. Flávio nos vídeos sobre preservação conservadora e responsabilidade estética.
+     - **FAQ Clínico (`#duvidas`):** Expandido para 6 dúvidas frequentes cruciais (dor/desgaste, resina vs porcelana, naturalidade, retrabalho de facetas antigas, durabilidade e localização).
+  2. **Geração e Integração do Novo Modelo 3D Opção A (`assets/images/faceta-lente-3d.png` em `#especialidades`):**
+     - Gerado render 3D de alta precisão mostrando a vista explodida (*exploded view*) de uma lente/faceta ultrafina em resina translúcida levitando à frente da coroa do dente natural intacto (comunicando visualmente o conceito de técnica aditiva **sem desgaste** e eliminando o parafuso de implante da versão anterior).
+     - Processado com `rembg` para recorte de canal alfa suave e preservado o parallax interativo no mouse em harmonia com os anéis orbitais e o brilho radial azul.
+     - Os 4 pontos orbitais foram reestruturados como o ecossistema completo: *Facetas em Resina*, *Clareamento Prévio*, *Design Gengival* e *Polimento e Longevidade*.
+  3. **Cinema Grid 9:16 de Vídeos Reais do Instagram (`#depoimentos`):**
+     - Estruturado em 3 colunas verticais com cards de proporção nativa `9:16` com bordas arredondadas de `32px` e efeito de Spotlight no cursor, mantendo independência completa das fotos de `#casos`.
+     - **Ordem dos pacientes:**
+       - 1º: **Ana Luiza** (`video-ana-luiza-web.mp4`) — Cinematográfico, naturalidade e zero dor.
+       - 2º: **Diego** (`video-diego-web.mp4`) — Fala do Dr. Flávio + segurança no retrabalho de facetas (vídeo aparado para remover tela cinza final).
+       - 3º: **Fael `@faelzueira`** (`video-fael-web.mp4`) — Storytelling completo em 3 etapas e reação no espelho (comprimido com faststart).
+  4. **Arquitetura de Performance de Vídeo em 4 Camadas (`css/styles.css` e `js/main.js`):**
+     - **Zero-Byte Initial Load:** Ao carregar a página, nenhum vídeo é baixado; apenas capas WebP ultraleves de ~8 a 20 KB são exibidas com `preload="none"`.
+     - **Click-to-Stream sob demanda:** Ao clicar no card ou botão Play, o arquivo `.mp4` é conectado instantaneamente e inicia com áudio ativo.
+     - **Exclusividade de Áudio:** Ao dar play em um card, qualquer outro vídeo ativo é automaticamente pausado.
+     - **Pausa Automática Fora da Tela:** `IntersectionObserver` pausa o vídeo caso o usuário continue o scroll, liberando a GPU do dispositivo móvel.
+     - **Scroll-snap Nativo no Mobile:** No celular (`<= 767px`), os cards viram uma faixa de rolagem horizontal fluida com suporte a toque.
+- **Skills utilizadas:**
+  - `design-taste-frontend`, `impeccable`, `emil-design-eng`, `apple-design`, `animate`, `animation-performance`, `mobile-native`.
+- **Arquivos criados/modificados:**
+  - `index.html` (modificado)
+  - `css/styles.css` (modificado)
+  - `js/main.js` (modificado)
+  - `assets/images/faceta-lente-3d.png` (criado)
+  - `assets/images/poster-ana-luiza.webp` (criado)
+  - `assets/images/poster-diego.webp` (criado)
+  - `assets/images/poster-fael.webp` (criado)
+  - `assets/videos/video-ana-luiza-web.mp4` (criado)
+  - `assets/videos/video-diego-web.mp4` (criado)
+  - `assets/videos/video-fael-web.mp4` (criado)
+  - `scripts/process_3d_render.py` (criado)
+  - `scripts/process_videos.py` (criado)
+  - `docs/acompanhamento.md` (atualizado)
+
+### [2026-10-26] — Etapa 10: Controle Interativo de Volume nos Vídeos, Novo Frame de Capa do Fael, Render 3D de Arcada Superior Completa e Modal Lightbox da Estrutura da Clínica
+- **O que foi feito:**
+  1. **Controle Deslizante de Volume nos Vídeos (`#depoimentos`):**
+     - Adicionado `.video-volume-group` em cada um dos 3 cards de depoimentos reais, combinando o botão `.video-audio-toggle` com um controle deslizante customizado `.video-volume-slider` (`<input type="range">`) estilizado na linguagem Apple/Glass (trilho translúcido, thumb branco circular de 12px com zoom no hover).
+     - Implementada expansão suave no hover/foco (`max-width: 0 -> 80px`, `opacity: 0 -> 1`), permitindo ao visitante ajustar o som entre 0% e 100% de forma precisa e fluida tanto no mouse quanto em telas de toque.
+     - Sincronização contínua do volume compartilhado entre os 3 vídeos (`sharedVolume = 0.75`), mutando o elemento caso o slider atinja zero e desmutando automaticamente caso o paciente deslize para cima, com `stopPropagation()` para evitar pausas acidentais no vídeo.
+  2. **Substituição da Capa do Vídeo do Fael (`assets/images/poster-fael.webp`):**
+     - Extraído frame de alta resolução via FFmpeg exatamente em `00:02:26.5` de `assets/videos/depoimento_cliente_flavio_insta.mp4`.
+     - O novo frame exibe o paciente Fael sozinho no enquadramento, frontal e com um sorriso aberto e espontâneo exibindo o resultado estético final das facetas com iluminação uniforme (eliminando o frame anterior desfavorável em que o dentista aparecia atrás).
+     - Comprimido para WebP ultraleve (apenas 13.1 KB, 540x960), preservando a arquitetura de *Zero-Byte Initial Load*.
+  3. **Novo Modelo 3D de Arcada Superior Completa (`assets/images/faceta-lente-3d.png` em `#especialidades`):**
+     - Substituído o render de dente único por uma arcada dental superior completa com 6 facetas anteriores em visão explodida (*exploded view*).
+     - Alto padrão de contraste e realismo: dentes de base em esmalte natural marfim saudável (tom A2) e as 6 facetas flutuantes em branco perolado translúcido com reflexo azul cirúrgico (`#324ACD` / tom BL2), demonstrando visualmente a sobreposição anatômica e a técnica conservadora **sem desgaste invasivo**.
+     - Processado com corte de fundo por IA (`rembg`) gerando canal alfa 100% transparente (`1175x556`, 670 KB) e perfeitamente centrado nos anéis orbitais com iluminação radial azul e parallax sutil.
+  4. **Visualização Ampliada das Fotos da Estrutura da Clínica (`#clinica`):**
+     - Bento Grid da clínica atualizado com indicador de lupa `.clinic-zoom-hint` translúcido nos cantos superiores de `.clinic-photo-large` e `.clinic-photo-small`, além de `cursor: zoom-in`.
+     - Implementado o modal `#clinicLightboxModal` com estética Apple Glass (`backdrop-filter: blur(20px)`), cantos arredondados de `28px`, transição suave via GSAP/CSS (`scale: 0.94 -> 1`, `y: 12 -> 0`), trava de rolagem no `body`, pílula de vidro com legenda da foto e fechamento acessível via botão `X`, clique no fundo escurecido ou tecla `Escape`.
+- **Skills utilizadas:**
+  - `design-taste-frontend`, `impeccable`, `emil-design-eng`, `apple-design`, `animate`, `animation-performance`, `mobile-native`.
+- **Arquivos criados/modificados:**
+  - `index.html` (modificado)
+  - `css/styles.css` (modificado)
+  - `js/main.js` (modificado)
+  - `assets/images/poster-fael.webp` (regenerado)
+  - `assets/images/faceta-lente-3d.png` (regenerado com arcada completa e transparência alfa)
   - `docs/acompanhamento.md` (atualizado)
 
 ---

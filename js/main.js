@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initCasesViewToggle();
   initCasesMorphDialog(prefersReducedMotion);
 
+  // 6.1. Subseção de Depoimentos: Vídeos Reais 9:16 com Click-to-Stream e Áudio Exclusivo
+  initVideoTestimonials();
+
+  // 6.2. Seção 08: Modal Lightbox para visualização ampliada das fotos da clínica
+  initClinicLightbox(prefersReducedMotion);
+
   // 7. Seção 07: Acordeão de Perguntas Frequentes (FAQ)
   initFaqAccordion();
 
@@ -771,7 +777,7 @@ function initScrollReveals(prefersReducedMotion) {
           const isMobile = window.innerWidth < 768;
           const isHorizontalSnapItem =
             isMobile &&
-            entry.target.matches('.indication-card, .step-card, .case-card, .testimonial-card');
+            entry.target.matches('.indication-card, .step-card, .case-card, .video-story-card, .testimonial-card');
 
           if (isHorizontalSnapItem) {
             observer.unobserve(entry.target);
@@ -934,7 +940,7 @@ function initSpotlightElements(hasFinePointer) {
   if (!hasFinePointer) return;
 
   const spotlightTargets = document.querySelectorAll(
-    '.hero-cta-group .btn-primary-pill, .glass-pill, .indication-card, .step-card, .testimonial-card, .faq-item, .clinic-photo-large, .clinic-photo-small'
+    '.hero-cta-group .btn-primary-pill, .glass-pill, .indication-card, .step-card, .video-story-card, .testimonial-card, .faq-item, .clinic-photo-large, .clinic-photo-small'
   );
 
   spotlightTargets.forEach((el) => {
@@ -1169,5 +1175,263 @@ function initCasesMorphDialog(prefersReducedMotion) {
   if (backdrop) backdrop.addEventListener('click', closeMorphDialog);
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMorphDialog();
+  });
+}
+
+/**
+ * 14. VÍDEOS DE DEPOIMENTOS REAIS (CINEMA GRID 9:16)
+ * - Click-to-Stream: nenhum byte de vídeo é baixado no load inicial da página.
+ * - Ao clicar, injeta o data-src sob demanda, inicia a reprodução com áudio ativo e pausa os demais vídeos.
+ * - Controle de Volume deslizante customizado em cada card com sincronização contínua.
+ * - Pausa automática via IntersectionObserver ao rolar para fora da tela (libera decodificador de hardware da GPU).
+ * - Oculta a legenda inferior suavemente durante o play para não cobrir as legendas do Reels.
+ */
+function initVideoTestimonials() {
+  const cards = document.querySelectorAll('.video-story-card');
+  if (!cards.length) return;
+
+  let sharedVolume = 0.75;
+
+  const pauseAllVideos = (exceptCard = null) => {
+    cards.forEach((card) => {
+      if (card === exceptCard) return;
+      const video = card.querySelector('.video-element');
+      if (video && !video.paused) {
+        video.pause();
+      }
+      card.classList.remove('is-playing');
+    });
+  };
+
+  cards.forEach((card) => {
+    const video = card.querySelector('.video-element');
+    const playBtn = card.querySelector('.video-play-btn');
+    const audioToggle = card.querySelector('.video-audio-toggle');
+    const volumeGroup = card.querySelector('.video-volume-group');
+    const volumeSlider = card.querySelector('.video-volume-slider');
+    const progressFill = card.querySelector('.video-progress-fill');
+
+    if (!video) return;
+
+    // Define volume inicial do elemento de mídia e do controle deslizante
+    video.volume = sharedVolume;
+    if (volumeSlider) {
+      volumeSlider.value = sharedVolume;
+    }
+
+    // Impede que cliques na área de volume (botão ou slider) pausem ou reproduzam o vídeo acidentalmente
+    if (volumeGroup) {
+      volumeGroup.addEventListener('click', (e) => e.stopPropagation());
+    }
+
+    // Controle dinâmico de volume pelo slider
+    if (volumeSlider) {
+      volumeSlider.addEventListener('input', (e) => {
+        e.stopPropagation();
+        const val = Math.max(0, Math.min(1, parseFloat(volumeSlider.value)));
+        sharedVolume = val;
+        video.volume = val;
+
+        if (val === 0) {
+          video.muted = true;
+          card.classList.remove('is-unmuted');
+        } else {
+          video.muted = false;
+          card.classList.add('is-unmuted');
+        }
+
+        // Sincroniza o slider e o volume em todos os outros cards de depoimentos
+        cards.forEach((otherCard) => {
+          if (otherCard === card) return;
+          const otherSlider = otherCard.querySelector('.video-volume-slider');
+          const otherVideo = otherCard.querySelector('.video-element');
+          if (otherSlider) otherSlider.value = val;
+          if (otherVideo) otherVideo.volume = val;
+          if (val === 0) {
+            if (otherVideo) otherVideo.muted = true;
+            otherCard.classList.remove('is-unmuted');
+          }
+        });
+      });
+    }
+
+    // Toggle de áudio isolado (Mudo / Som)
+    if (audioToggle) {
+      audioToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.muted || video.volume === 0) {
+          // Desmuta
+          if (sharedVolume <= 0) sharedVolume = 0.75;
+          video.volume = sharedVolume;
+          video.muted = false;
+          card.classList.add('is-unmuted');
+          if (volumeSlider) volumeSlider.value = sharedVolume;
+        } else {
+          // Muta
+          video.muted = true;
+          card.classList.remove('is-unmuted');
+        }
+      });
+    }
+
+    // Ação principal de Play/Pause ao clicar no card ou no botão central
+    const togglePlayback = () => {
+      // Lazy-load do arquivo .mp4 no primeiro clique (Zero-Byte Initial Load)
+      if (!video.src && video.dataset.src) {
+        video.src = video.dataset.src;
+        video.load();
+      }
+
+      if (video.paused) {
+        pauseAllVideos(card);
+
+        // Inicia com áudio ativo e volume respeitando a preferência
+        if (sharedVolume <= 0) sharedVolume = 0.75;
+        video.volume = sharedVolume;
+        video.muted = false;
+        card.classList.add('is-unmuted');
+        if (volumeSlider) volumeSlider.value = sharedVolume;
+
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              card.classList.add('is-playing');
+            })
+            .catch(() => {
+              // Fallback para reprodução silenciosa caso a política de autoplay do navegador bloqueie áudio
+              video.muted = true;
+              card.classList.remove('is-unmuted');
+              video.play().then(() => card.classList.add('is-playing'));
+            });
+        }
+      } else {
+        video.pause();
+        card.classList.remove('is-playing');
+      }
+    };
+
+    card.addEventListener('click', togglePlayback);
+    if (playBtn) playBtn.addEventListener('click', togglePlayback);
+
+    // Atualização da barra de progresso durante o vídeo
+    video.addEventListener('timeupdate', () => {
+      if (video.duration && progressFill) {
+        const pct = (video.currentTime / video.duration) * 100;
+        progressFill.style.width = `${pct}%`;
+      }
+    });
+
+    // Ao finalizar o vídeo
+    video.addEventListener('ended', () => {
+      card.classList.remove('is-playing');
+      if (progressFill) progressFill.style.width = '0%';
+    });
+  });
+
+  // IntersectionObserver: pausa o vídeo automaticamente quando o card sair da tela no scroll
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          const video = entry.target.querySelector('.video-element');
+          if (video && !video.paused) {
+            video.pause();
+            entry.target.classList.remove('is-playing');
+          }
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  cards.forEach((c) => videoObserver.observe(c));
+}
+
+/**
+ * 15. MODAL LIGHTBOX PARA FOTOS DA ESTRUTURA DA CLÍNICA (#clinica)
+ * Permite expandir qualquer foto da clínica para resolução completa em tela cheia com backdrop blur,
+ * acessibilidade por teclado (Escape / Enter / Espaço) e foco preservado.
+ */
+function initClinicLightbox(prefersReducedMotion) {
+  const modal = document.getElementById('clinicLightboxModal');
+  const backdrop = document.getElementById('clinicLightboxBackdrop');
+  const closeBtn = document.getElementById('clinicLightboxClose');
+  const img = document.getElementById('clinicLightboxImg');
+  const title = document.getElementById('clinicLightboxTitle');
+  const card = document.getElementById('clinicLightboxCard');
+  const triggers = document.querySelectorAll(
+    '.clinic-photo-large[data-lightbox-src], .clinic-photo-small[data-lightbox-src]'
+  );
+
+  if (!modal || !backdrop || !closeBtn || !img || !title || !triggers.length) return;
+
+  let lastFocusedTrigger = null;
+
+  const openLightbox = (src, titleText, triggerEl) => {
+    lastFocusedTrigger = triggerEl;
+    img.src = src;
+    img.alt = titleText || 'Estrutura da Clínica Dr. Flávio Saraiva';
+    title.textContent = titleText || '';
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    if (!prefersReducedMotion && typeof gsap !== 'undefined' && card) {
+      gsap.fromTo(
+        card,
+        { scale: 0.94, opacity: 0, y: 14 },
+        { scale: 1, opacity: 1, y: 0, duration: 0.34, ease: 'expo.out' }
+      );
+    }
+
+    setTimeout(() => {
+      closeBtn.focus();
+    }, 50);
+  };
+
+  const closeLightbox = () => {
+    if (!modal.classList.contains('is-open')) return;
+
+    document.body.style.overflow = '';
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+
+    if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+      lastFocusedTrigger.focus();
+    }
+  };
+
+  triggers.forEach((trigger) => {
+    const handleTrigger = (e) => {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-lightbox-src');
+      const titleText = trigger.getAttribute('data-lightbox-title');
+      if (src) {
+        openLightbox(src, titleText, trigger);
+      }
+    };
+
+    trigger.addEventListener('click', handleTrigger);
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleTrigger(e);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeLightbox();
+  });
+
+  backdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeLightbox();
+    }
   });
 }

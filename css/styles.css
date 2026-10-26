@@ -1367,10 +1367,11 @@ button {
 }
 
 .arch-3d-img {
-  width: clamp(320px, 37vw, 490px);
+  width: clamp(340px, 42vw, 540px);
+  max-width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 24px 40px rgba(20, 24, 41, 0.12));
+  filter: drop-shadow(0 24px 44px rgba(20, 24, 41, 0.16));
   transition: transform 400ms var(--ease-out);
 }
 
@@ -1720,6 +1721,7 @@ button {
 .indication-card::before,
 .step-card::before,
 .testimonial-card::before,
+.video-story-card::before,
 .faq-item::before {
   content: '';
   position: absolute;
@@ -1740,6 +1742,7 @@ button {
 .indication-card::after,
 .step-card::after,
 .testimonial-card::after,
+.video-story-card::after,
 .faq-item::after {
   content: '';
   position: absolute;
@@ -2033,45 +2036,322 @@ button {
   color: var(--text-secondary);
 }
 
-/* Subseção: Depoimentos */
+/* Subseção: Depoimentos Reais em Vídeo (Cinema Grid 9:16) */
 .testimonials-subsection {
   margin-top: clamp(56px, 7vw, 88px);
   padding-top: clamp(40px, 5vw, 64px);
   border-top: 1px solid rgba(20, 24, 41, 0.08);
 }
 
-.testimonials-grid {
+.video-testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--grid-gutter);
 }
 
-.testimonial-card {
-  background-color: var(--bg-reading);
-  border-radius: var(--radius-card); /* 24px */
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 28px;
+.video-story-card {
   position: relative;
+  border-radius: 32px;
   overflow: hidden;
   isolation: isolate;
-  border: 1px solid rgba(50, 74, 205, 0.08);
-  transition: transform 220ms var(--ease-out), background-color 220ms ease, box-shadow 220ms ease;
-}
-
-.testimonial-card > * {
-  position: relative;
-  z-index: 2;
+  background-color: var(--navy-surgical);
+  aspect-ratio: 9 / 15.6;
+  box-shadow: 0 18px 45px rgba(12, 17, 51, 0.16);
+  cursor: pointer;
+  transition: transform 260ms var(--ease-out), box-shadow 260ms ease;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .testimonial-card:hover {
-    background-color: var(--white);
+  .video-story-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 36px rgba(12, 17, 51, 0.06);
+    box-shadow: 0 24px 55px rgba(12, 17, 51, 0.22);
   }
+
+  .video-story-card:hover .video-play-btn {
+    transform: translate(-50%, -50%) scale(1.08);
+    background-color: var(--blue-electric-hover);
+  }
+}
+
+.video-frame-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background-color: var(--navy-surgical);
+}
+
+.video-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 17, 51, 0.6) 0%,
+    rgba(12, 17, 51, 0.05) 32%,
+    rgba(12, 17, 51, 0.2) 60%,
+    rgba(8, 12, 36, 0.9) 100%
+  );
+  transition: opacity 300ms ease;
+  z-index: 2;
+}
+
+.video-top-bar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.video-case-badge {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(12, 17, 51, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.video-volume-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 4px;
+  border-radius: var(--radius-pill);
+  background: rgba(12, 17, 51, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  z-index: 10;
+}
+
+.video-volume-group:hover,
+.video-volume-group:focus-within {
+  background: rgba(12, 17, 51, 0.9);
+  border-color: rgba(169, 184, 255, 0.45);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.video-audio-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 160ms var(--ease-out), color 160ms ease, background-color 160ms ease;
+}
+
+.video-audio-toggle:hover {
+  color: var(--blue-soft);
+  transform: scale(1.08);
+}
+
+.video-audio-toggle .icon-sound-on {
+  display: none;
+}
+
+.video-story-card.is-unmuted .video-audio-toggle .icon-sound-on {
+  display: block;
+}
+
+.video-story-card.is-unmuted .video-audio-toggle .icon-sound-off {
+  display: none;
+}
+
+.video-volume-slider-wrap {
+  display: flex;
+  align-items: center;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-right: 0;
+  transition: max-width 260ms cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 200ms ease,
+              padding 200ms ease;
+}
+
+.video-volume-group:hover .video-volume-slider-wrap,
+.video-volume-group:focus-within .video-volume-slider-wrap,
+.video-volume-group.is-expanded .video-volume-slider-wrap {
+  max-width: 80px;
+  opacity: 1;
+  padding-right: 8px;
+}
+
+.video-volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 68px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.28);
+  outline: none;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.video-volume-slider:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.video-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease;
+}
+
+.video-volume-slider::-webkit-slider-thumb:hover,
+.video-volume-slider:active::-webkit-slider-thumb {
+  transform: scale(1.25);
+  background: var(--blue-soft);
+}
+
+.video-volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease;
+}
+
+.video-volume-slider::-moz-range-thumb:hover,
+.video-volume-slider:active::-moz-range-thumb {
+  transform: scale(1.25);
+  background: var(--blue-soft);
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: var(--blue-electric);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(50, 74, 205, 0.55);
+  z-index: 8;
+  cursor: pointer;
+  transition: transform 220ms var(--ease-out), background-color 180ms ease, opacity 260ms ease;
+}
+
+.video-play-btn svg {
+  margin-left: 3px;
+}
+
+.video-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background: rgba(255, 255, 255, 0.16);
+  z-index: 12;
+  overflow: hidden;
+}
+
+.video-progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--blue-electric);
+  transition: width 120ms linear;
+}
+
+.video-bottom-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--white);
+  transition: opacity 300ms var(--ease-out), transform 300ms var(--ease-out);
+}
+
+.video-quote {
+  font-size: 0.90625rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+.video-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.video-author-info strong {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.video-author-info span {
+  font-size: 0.75rem;
+  color: var(--blue-soft);
+}
+
+/* Estado de Reprodução Ativa */
+.video-story-card.is-playing .video-overlay-gradient {
+  opacity: 0.25;
+}
+
+.video-story-card.is-playing .video-bottom-caption {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.video-story-card.is-playing .video-play-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.85);
 }
 
 /* Modal Morphing Dialog Image para Casos Clínicos (#casos) */
@@ -2349,7 +2629,45 @@ button {
   isolation: isolate;
   background-color: var(--card-surface-tint);
   border: 1px solid rgba(50, 74, 205, 0.08);
+  cursor: zoom-in;
   transition: transform 220ms var(--ease-out), box-shadow 220ms ease;
+}
+
+.clinic-zoom-hint {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(12, 17, 51, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 220ms ease, transform 220ms var(--ease-out), background-color 180ms ease;
+  pointer-events: none;
+}
+
+.clinic-photo-large:hover .clinic-zoom-hint,
+.clinic-photo-small:hover .clinic-zoom-hint,
+.clinic-photo-large:focus-visible .clinic-zoom-hint,
+.clinic-photo-small:focus-visible .clinic-zoom-hint {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (hover: none) {
+  .clinic-zoom-hint {
+    opacity: 0.85;
+    transform: scale(0.92);
+  }
 }
 
 .clinic-photo-large::after,
@@ -2569,6 +2887,125 @@ button {
   .map-directions-pill:hover .directions-arrow-circle svg {
     transform: translateX(2px);
   }
+}
+
+/* ==========================================================================
+   12.1. MODAL LIGHTBOX PARA FOTOS DA ESTRUTURA DA CLÍNICA (#clinica)
+   Estética Apple Glass, transição orgânica, backdrop blur e fechamento acessível
+   ========================================================================== */
+.clinic-lightbox-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 36px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clinic-lightbox-dialog.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.clinic-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 12, 36, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  cursor: zoom-out;
+}
+
+.clinic-lightbox-card {
+  position: relative;
+  z-index: 2;
+  max-width: min(92vw, 1120px);
+  max-height: min(88vh, 840px);
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(18, 24, 66, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 28px 72px -12px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(169, 184, 255, 0.14);
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.94) translateY(12px);
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clinic-lightbox-dialog.is-open .clinic-lightbox-card {
+  transform: scale(1) translateY(0);
+}
+
+.clinic-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(12, 17, 51, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 180ms var(--ease-out), background-color 180ms ease, border-color 180ms ease;
+}
+
+.clinic-lightbox-close:hover {
+  background: rgba(50, 74, 205, 0.9);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: scale(1.08);
+}
+
+.clinic-lightbox-media-wrap {
+  width: 100%;
+  max-height: calc(88vh - 76px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080C24;
+}
+
+.clinic-lightbox-img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(78vh, 740px);
+  object-fit: contain;
+  display: block;
+}
+
+.clinic-lightbox-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10;
+}
+
+.clinic-lightbox-footer .clinic-glass-badge {
+  position: static;
+  background: rgba(12, 17, 51, 0.82);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================================================
@@ -3053,7 +3490,7 @@ button {
   }
 
   .arch-3d-img {
-    width: min(82vw, 300px);
+    width: min(88vw, 340px);
   }
 
   .tech-point-card {
@@ -3083,6 +3520,7 @@ button {
   .indication-cards-grid,
   .steps-grid,
   .cases-grid,
+  .video-testimonials-grid,
   .testimonials-grid {
     display: flex;
     overflow-x: auto;
@@ -3097,6 +3535,7 @@ button {
   .indication-cards-grid::-webkit-scrollbar,
   .steps-grid::-webkit-scrollbar,
   .cases-grid::-webkit-scrollbar,
+  .video-testimonials-grid::-webkit-scrollbar,
   .testimonials-grid::-webkit-scrollbar {
     display: none;
   }
@@ -3104,6 +3543,7 @@ button {
   .indication-card,
   .step-card,
   .case-card,
+  .video-story-card,
   .testimonial-card {
     flex: 0 0 84%;
     scroll-snap-align: start;
