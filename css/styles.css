@@ -3525,11 +3525,37 @@ button {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--section-inner-x);
+    scroll-padding-left: var(--section-inner-x);
+    scroll-padding-right: var(--section-inner-x);
     gap: 14px;
-    padding-bottom: 8px;
+    padding-bottom: 14px;
     margin-inline: calc(var(--section-inner-x) * -1);
     padding-inline: var(--section-inner-x);
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+  }
+
+  .indication-cards-grid.is-dragging,
+  .steps-grid.is-dragging,
+  .cases-grid.is-dragging,
+  .video-testimonials-grid.is-dragging {
+    cursor: grabbing !important;
+    user-select: none !important;
+    scroll-snap-type: none !important;
+  }
+
+  /* Respiro harmônico no final da rolagem para todos os navegadores móveis */
+  .indication-cards-grid::after,
+  .steps-grid::after,
+  .cases-grid::after,
+  .video-testimonials-grid::after,
+  .testimonials-grid::after {
+    content: '';
+    flex: 0 0 1px;
+    margin-right: calc(var(--section-inner-x) - 14px);
+    pointer-events: none;
   }
 
   .indication-cards-grid::-webkit-scrollbar,

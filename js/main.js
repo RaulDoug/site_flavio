@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6.2. Seção 08: Modal Lightbox para visualização ampliada das fotos da clínica
   initClinicLightbox(prefersReducedMotion);
 
+  // 6.3. Carrosséis Móveis: Suporte a arrasto lateral contínuo com mouse e touch (Drag-to-Scroll)
+  initMobileCarouselsDrag();
+
   // 7. Seção 07: Acordeão de Perguntas Frequentes (FAQ)
   initFaqAccordion();
 
@@ -1435,3 +1438,68 @@ function initClinicLightbox(prefersReducedMotion) {
     }
   });
 }
+
+/**
+ * 16. SUPORTE A ARRASTO LATERAL COM MOUSE (DRAG-TO-SCROLL) NOS CARROSSÉIS
+ * Permite clicar e arrastar lateralmente nos carrosséis (.indication-cards-grid,
+ * .steps-grid, .cases-grid, .video-testimonials-grid) tanto com mouse quanto no touch,
+ * com cancelamento seguro de clique acidental nos cards ao arrastar.
+ */
+function initMobileCarouselsDrag() {
+  const selectors = [
+    '.indication-cards-grid',
+    '.steps-grid',
+    '.cases-grid',
+    '.video-testimonials-grid',
+  ];
+
+  selectors.forEach((selector) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let hasMoved = false;
+
+    el.addEventListener('mousedown', (e) => {
+      // Aceita apenas clique com botão esquerdo
+      if (e.button !== 0) return;
+      isDown = true;
+      hasMoved = false;
+      startX = e.pageX - el.offsetLeft;
+      scrollLeft = el.scrollLeft;
+      el.classList.add('is-dragging');
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const x = e.pageX - el.offsetLeft;
+      const walk = (x - startX) * 1.35;
+      if (Math.abs(walk) > 4) {
+        hasMoved = true;
+      }
+      el.scrollLeft = scrollLeft - walk;
+    });
+
+    const stopDrag = () => {
+      if (!isDown) return;
+      isDown = false;
+      el.classList.remove('is-dragging');
+
+      if (hasMoved) {
+        const captureClick = (clickEvt) => {
+          clickEvt.stopPropagation();
+          clickEvt.preventDefault();
+        };
+        el.addEventListener('click', captureClick, { capture: true, once: true });
+        setTimeout(() => {
+          hasMoved = false;
+        }, 50);
+      }
+    };
+
+    window.addEventListener('mouseup', stopDrag);
+  });
+}
+

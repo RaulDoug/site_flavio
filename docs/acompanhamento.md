@@ -372,6 +372,42 @@ site_flavio/
   - `assets/images/faceta-lente-3d.png` (regenerado com arcada completa e transparência alfa)
   - `docs/acompanhamento.md` (atualizado)
 
+### [2026-10-26] — Etapa 11: Correção do Recuo Inicial dos Carrosséis no Mobile (Edge-to-Edge sem Grudar na Esquerda)
+- **O que foi feito:**
+  1. **Alinhamento do Primeiro Card sem Grudar na Borda:**
+     - Adicionados scroll-padding-inline: var(--section-inner-x) e scroll-padding-left: var(--section-inner-x) nas faixas roláveis móveis (.indication-cards-grid, .steps-grid, .cases-grid, .video-testimonials-grid, .testimonials-grid).
+     - Agora, o primeiro card inicia com o recuo harmônico de 20px da lateral esquerda da tela, alinhado perfeitamente aos títulos e subtítulos de cada seção, sem que o scroll-snap-align: start puxe o card para colar no canto x = 0.
+  2. **Preservação da Fluidez Full-Bleed (Sem Padding na Seção Toda):**
+     - A seção .section-block mantém sua largura e preenchimento originais.
+     - Durante a rolagem horizontal com o dedo, os cards continuam deslizando suavemente de ponta a ponta da tela sem qualquer máscara dura ou corte visual.
+  3. **Respiro Final e Otimização Touch:**
+     - Adicionado pseudo-elemento ::after espaçador em todas as faixas roláveis (lex: 0 0 1px; margin-right: calc(var(--section-inner-x) - 14px);), garantindo que o último card também termine com o mesmo respiro de 20px à direita em todos os navegadores móveis (eliminando o descarte de padding-right no Safari iOS).
+     - Incluídos 	ouch-action: pan-y e -webkit-overflow-scrolling: touch para rolagem vertical suave sem travar o scroll da página ao deslizar o dedo sobre os cards.
+- **Skills utilizadas:**
+  - mobile-native, pple-design, emil-design-eng, nimation-performance, impeccable.
+- **Arquivos criados/modificados:**
+  - css/styles.css (modificado)
+  - docs/acompanhamento.md (atualizado)
+  - walkthrough.md (atualizado)
+
+### [2026-10-26] — Etapa 12: Correção do Bloqueio de Arrasto Lateral (Touch & Mouse Drag-to-Scroll) nos Carrosséis
+- **O que foi feito:**
+  1. **Remoção do Bloqueio de Gestos Horizontais (	ouch-action: pan-y):**
+     - Corrigida a propriedade 	ouch-action: o valor pan-y anterior instruía os navegadores móveis a descartar qualquer gesto no eixo X. Atualizado para 	ouch-action: pan-x pan-y, restabelecendo o swipe nativo fluido no celular a 60/120fps.
+  2. **Implementação de Drag-to-Scroll com Mouse (initMobileCarouselsDrag em js/main.js):**
+     - Adicionado suporte nativo a clique e arrasto do mouse nos 4 carrosséis móveis (.indication-cards-grid, .steps-grid, .cases-grid, .video-testimonials-grid).
+     - Agora, mesmo ao testar no computador com o mouse (redimensionando a janela ou no modo responsivo), o usuário pode clicar e puxar para os lados com resposta direta do cursor e inércia suave.
+     - Implementado filtro anti-clique acidental (captureClick), garantindo que o gesto de arrastar não abra links ou dê play acidental nos vídeos.
+  3. **Manutenção do Recuo Inicial sem Grudar na Borda:**
+     - Preservado o recuo de 20px do primeiro card alinhado aos títulos (scroll-padding-inline: var(--section-inner-x)) e a sangria fluida até a borda ao rolar, sem adicionar padding na seção toda.
+- **Skills utilizadas:**
+  - mobile-native, pple-design, emil-design-eng, nimation-performance, impeccable.
+- **Arquivos criados/modificados:**
+  - css/styles.css (modificado)
+  - js/main.js (modificado)
+  - docs/acompanhamento.md (atualizado)
+  - walkthrough.md (atualizado)
+
 ---
 
 ## 5. Próximas Etapas Previstas (Lapidação Seção por Seção)
