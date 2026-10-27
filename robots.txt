@@ -1,0 +1,53 @@
+# =============================================================================
+# robots.txt — Dr. Flávio Saraiva Odontologia
+# -----------------------------------------------------------------------------
+# ⚠️ PENDENTE: o domínio de produção ainda não foi definido.
+#    Quando definir, execute na raiz do projeto:
+#        python scripts/set_domain.py https://www.SEU-DOMINIO-REAL.com.br
+#    Ele atualiza robots.txt, sitemap.xml, llms.txt, index.html e webmanifest.
+#
+# ⚠️ Este arquivo só funciona na RAIZ do domínio (ex.: https://dominio.com.br/robots.txt).
+# =============================================================================
+
+# --- Regra geral: buscadores e rastreadores em geral -------------------------
+User-agent: *
+# Pastas internas de desenvolvimento, documentação e ativos originais não-web
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /.agents/
+Disallow: /.codex/
+Disallow: /.impeccable/
+Disallow: /.taste-skill/
+Disallow: /assets/_originais/
+Disallow: /skills-lock.json
+Allow: /
+
+# --- Crawlers de IA / busca generativa ---------------------------------------
+# O Dr. Flávio Saraiva incentiva citação e descoberta em respostas de ChatGPT,
+# Gemini, Perplexity, Claude, Copilot e Apple Intelligence.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: DuckAssistBot
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /.agents/
+Disallow: /.codex/
+Disallow: /.impeccable/
+Disallow: /.taste-skill/
+Disallow: /assets/_originais/
+Disallow: /skills-lock.json
+Allow: /
+
+# --- Mapa do site ------------------------------------------------------------
+# TODO: trocar pelo domínio real quando definido (python scripts/set_domain.py)
+Sitemap: https://www.SEU-DOMINIO.com.br/sitemap.xml

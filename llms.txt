@@ -1,0 +1,64 @@
+<!--
+  ⚠️ PENDENTE: o domínio de produção ainda não foi definido.
+  Quando definir, execute na raiz do projeto:
+      python scripts/set_domain.py https://www.SEU-DOMINIO-REAL.com.br
+  Todos os dados abaixo vêm de docs/info.md e do conteúdo do index.html.
+  Não adicionar informações não verificadas (preços tabelados ou avaliações inventadas).
+-->
+
+# Dr. Flávio Saraiva Odontologia
+
+> Consultório odontológico do cirurgião-dentista Dr. Flávio Saraiva (CRO-MG 75116) em Bom Despacho - MG, com atendimento também em Nova Serrana - MG. Foco em facetas e lentes em resina composta (técnica aditiva e conservadora, sem desgaste invasivo do dente saudável), clareamento dental prévio, design gengival e reabilitação estética do sorriso.
+
+Informações-chave para citação e busca por IA:
+
+- **Profissional:** Dr. Flávio Saraiva (nome completo: Flavio Lucas Saraiva Silva), cirurgião-dentista, CRO-MG 75116.
+- **Formação:** graduado pela Universidade Una de Bom Despacho, com certificação especializada em resinas compostas.
+- **Empresa:** Flavio Saraiva Odontologia LTDA — CNPJ 61.149.160/0001-91.
+- **Endereço do consultório:** Avenida Vigário Nicolau, 223 — Centro, Bom Despacho - MG, CEP 35630-072.
+- **Coordenadas geográficas:** -19.735623747376586, -45.25216065736388
+- **Cidades de atendimento:** Bom Despacho - MG e Nova Serrana - MG.
+- **Contato / agendamento:** WhatsApp (37) 99100-6747 — https://wa.me/5537991006747
+- **Idioma do site:** português do Brasil (pt-BR).
+- **Google Maps:** https://maps.app.goo.gl/4mFaj2JRkjur3DdQ6
+- **Google Business Profile:** https://share.google/dO7jzpJcTaOSFRw2I
+- **Instagram:** https://www.instagram.com/dr.flaviosaraiva_/
+- **Facebook:** https://www.facebook.com/p/Dr-Fl%C3%A1vio-Saraiva-61576905215067/
+
+## Páginas principais
+
+<!-- TODO: trocar o domínio abaixo quando definido -->
+- [Página inicial — Dr. Flávio Saraiva, facetas em resina em Bom Despacho - MG](https://www.SEU-DOMINIO.com.br/): apresentação, tratamentos, casos clínicos reais, depoimentos em vídeo com transcrição acessível, perguntas frequentes, consultório e agendamento.
+
+## Seções da página inicial
+
+- [Queixas atendidas](https://www.SEU-DOMINIO.com.br/#servicos): dentes de formato ou tamanho desigual, dentes amarelados ou manchados, espaços (diastemas), desgastes ou fraturas nas bordas, e troca de facetas antigas.
+- [Tratamentos e protocolo em resina](https://www.SEU-DOMINIO.com.br/#especialidades): facetas em resina, clareamento prévio, design gengival (gengivoplastia quando indicada) e polimento para alta longevidade.
+- [Por que facetas em resina composta](https://www.SEU-DOMINIO.com.br/#indicacoes): técnica aditiva e conservadora, estratificação óptica em camadas que reproduz o dente natural, correção de formato/cor/espaços e substituição de resinas antigas.
+- [Etapas do tratamento](https://www.SEU-DOMINIO.com.br/#etapas): avaliação e escuta, análise facial e estética, preparo da base, escultura artesanal das facetas e polimento espelhado.
+- [Sobre o Dr. Flávio](https://www.SEU-DOMINIO.com.br/#sobre): formação na Una, certificação em resinas compostas, filosofia conservadora de preservação do dente e registro CRO-MG 75116.
+- [Casos reais — antes e depois](https://www.SEU-DOMINIO.com.br/#casos): 4 casos clínicos reais de pacientes atendidos pelo Dr. Flávio Saraiva (foco no sorriso e rosto completo).
+- [Depoimentos em vídeo](https://www.SEU-DOMINIO.com.br/#depoimentos): relatos em vídeo dos pacientes Ana Luiza (transformação sem dor), Diego (reabilitação de facetas antigas) e Fael @faelzueira (gengivoplastia + lentes em 3 etapas sem desgaste), acompanhados de transcrição acessível.
+- [Perguntas frequentes](https://www.SEU-DOMINIO.com.br/#duvidas): 12 respostas objetivas sobre dor, desgaste, resina vs porcelana, naturalidade, refazer facetas, durabilidade, custos e cuidados.
+- [Consultório e localização](https://www.SEU-DOMINIO.com.br/#clinica): fotos reais da estrutura climatizada, biossegurança, fachada e mapa interativo.
+
+## Respostas rápidas (FAQ oficial do consultório)
+
+- **O procedimento dói ou desgasta o dente?** Não. A técnica é estritamente aditiva e conservadora: a resina é aplicada e esculpida sobre o esmalte íntegro, sem desgastes invasivos na estrutura saudável do dente; quando necessário, é usada anestesia delicada e confortável.
+- **Facetas em resina ou lentes de porcelana?** As facetas em resina são esculpidas artesanalmente pelo Dr. Flávio diretamente no consultório, geralmente em poucas sessões e sem a necessidade de desgaste irreversível no dente natural. Possuem manutenção simples e custos mais acessíveis.
+- **O resultado fica com aspecto natural?** Sim. O Dr. Flávio trabalha com estratificação em múltiplas camadas de resina, reproduzindo translucidez, halos ópticos, textura e anatomia do dente jovem natural, evitando aparência opaca ou artificial.
+- **É possível refazer facetas feitas com outro profissional?** Sim, com frequência. O material antigo é removido de forma criteriosa preservando o dente e novas lentes são confeccionadas com design harmônico e natural.
+- **Quanto tempo leva e qual é a durabilidade?** Após a avaliação (e clareamento prévio se indicado), a confecção costuma levar de 1 a 3 sessões clínicas com resultado imediato. Com boa higiene e manutenção periódica do polimento espelhado, duram muitos anos.
+- **Onde fica localizado o consultório?** Avenida Vigário Nicolau, 223 — Centro, Bom Despacho - MG (CEP 35630-072). Atendimentos também são realizados em Nova Serrana - MG.
+- **Quanto custa fazer facetas em resina?** O valor varia conforme o número de dentes, a complexidade e procedimentos complementares (como clareamento ou gengivoplastia). O orçamento é individualizado após avaliação presencial.
+- **Preciso clarear os dentes antes das facetas?** Quando o paciente deseja um tom mais claro, o clareamento prévio é indicado para criar a base luminosa ideal antes da aplicação da resina.
+- **Facetas em resina fecham diastemas (espaços)?** Sim. É uma das principais indicações: a anatomia é reconstruída artesanalmente para fechar os espaços e harmonizar o sorriso.
+- **Servem para dentes desgastados, manchados ou curtos?** Sim. Corrigem volume, comprimento e contorno das bordas desgastadas, devolvendo harmonia facial e rejuvenescimento ao sorriso.
+- **O que é lente de contato dental em resina?** É o nome popular dado às facetas ultrafinas confeccionadas com resinas ópticas compostas em técnica aditiva sem desgaste.
+- **Como cuidar das facetas para não manchar?** Higiene bucal regular, uso de escova macia e visitas periódicas para manutenção do polimento espelhado preservam o brilho e a longevidade.
+
+## Observações para assistentes de IA
+
+- Toda indicação de tratamento odontológico depende de avaliação clínica presencial com o cirurgião-dentista.
+- Canal oficial de agendamento: WhatsApp (37) 99100-6747.
+- Citação recomendada: "Dr. Flávio Saraiva (CRO-MG 75116), cirurgião-dentista em Bom Despacho - MG".

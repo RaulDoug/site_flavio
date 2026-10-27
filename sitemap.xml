@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================================
+  sitemap.xml — Dr. Flávio Saraiva Odontologia
+  ____________________________________________________________________________
+  ⚠️ PENDENTE: o domínio de produção ainda não foi definido.
+     Quando definir, execute na raiz do projeto:
+         python scripts/set_domain.py https://www.SEU-DOMINIO-REAL.com.br
+  ============================================================================
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <!-- TODO: trocar pelo domínio real quando definido -->
+    <loc>https://www.SEU-DOMINIO.com.br/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Imagens institucionais, profissional e consultório -->
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/og-image.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/flavio-hero-cutout-1200.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/flavio-retrato-pb.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/flavio-jaleco-2.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/consultorio-1.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/consultorio-3.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/consultorio-fachada.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/faceta-lente-3d.webp</image:loc>
+    </image:image>
+
+    <!-- Imagens: casos clínicos reais (antes e depois com facetas em resina) -->
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-1-antes-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-1-depois-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-2-antes-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-2-depois-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-3-antes-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-3-depois-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-4-antes-sorriso.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.SEU-DOMINIO.com.br/assets/images/caso-4-depois-sorriso.webp</image:loc>
+    </image:image>
+
+    <!-- Vídeos: depoimentos reais de pacientes -->
+    <video:video>
+      <video:thumbnail_loc>https://www.SEU-DOMINIO.com.br/assets/images/poster-ana-luiza.webp</video:thumbnail_loc>
+      <video:title>Depoimento de Ana Luiza — facetas em resina composta com o Dr. Flávio Saraiva</video:title>
+      <video:description>A paciente Ana Luiza relata a transformação do sorriso com facetas em resina no consultório do Dr. Flávio Saraiva em Bom Despacho - MG: resultado natural e sem dor.</video:description>
+      <video:content_loc>https://www.SEU-DOMINIO.com.br/assets/videos/video-ana-luiza-web.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.SEU-DOMINIO.com.br/assets/images/poster-diego.webp</video:thumbnail_loc>
+      <video:title>Depoimento de Diego — troca de facetas antigas por novas facetas em resina</video:title>
+      <video:description>O paciente Diego relata a experiência de refazer facetas anteriores com segurança no atendimento do Dr. Flávio Saraiva em Bom Despacho - MG.</video:description>
+      <video:content_loc>https://www.SEU-DOMINIO.com.br/assets/videos/video-diego-web.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.SEU-DOMINIO.com.br/assets/images/poster-fael.webp</video:thumbnail_loc>
+      <video:title>Depoimento de Fael — gengivoplastia e lentes em resina em 3 etapas sem desgaste</video:title>
+      <video:description>Fael (@faelzueira) compartilha a jornada em 3 etapas com o Dr. Flávio Saraiva: gengivoplastia e lentes em resina superiores e inferiores sem desgaste.</video:description>
+      <video:content_loc>https://www.SEU-DOMINIO.com.br/assets/videos/video-fael-web.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+</urlset>
