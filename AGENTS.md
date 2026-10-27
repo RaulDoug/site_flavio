@@ -26,7 +26,7 @@ Antes de criar, alterar, estilizar ou revisar qualquer seção, componente ou la
 
 Todas as informações oficiais do cliente, ativos visuais e referências criativas encontram-se na pasta [`docs/`](./docs):
 
-- **[`docs/info.md`](./docs/info.md):** Dados oficiais do **Dr. Flávio Saraiva** (CRO-MG 75116, CNPJ, endereço em Bom Despacho - MG, atuação também em Pitangui - MG, WhatsApp, Instagram, Facebook, descrição institucional e links de referência).
+- **[`docs/info.md`](./docs/info.md):** Dados oficiais do **Dr. Flávio Saraiva** (CRO-MG 75116, CNPJ, endereço em Bom Despacho - MG, atuação também em Nova Serrana - MG, WhatsApp, Instagram, Facebook, descrição institucional e links de referência).
 - **[`docs/images/`](./docs/images):**
   - Fotos profissionais do Dr. Flávio (`flavio_foto.jpg`, `flavio_foto2.jpg`, `flavio_foto_3.jpg`) e logotipos (`logo_flavio_branca_fundo_transparente.png`, `logo_baner_facebook_flavio.jpg`).
   - [`docs/images/clientes/`](./docs/images/clientes): Casos reais de Antes e Depois dos pacientes.

@@ -9,7 +9,7 @@
 - **Cliente / Profissional:** Dr. Flávio Saraiva (`Flavio Lucas Saraiva Silva`) — Cirurgião-Dentista (CRO-MG 75116)
 - **Razão Social / Nome Fantasia:** Flavio Saraiva Odontologia LTDA (`CNPJ: 61.149.160/0001-91`)
 - **Especialidade / Destaque:** Odontologia de excelência, estética dental (certificação em resinas compostas), clareamento, reabilitação oral, atendimento humanizado e biossegurança.
-- **Localização:** Avenida Vigário Nicolau, 223 - Centro, Bom Despacho - MG, CEP 35630-072 (Atuação em Bom Despacho-MG e Pitangui-MG).
+- **Localização:** Avenida Vigário Nicolau, 223 - Centro, Bom Despacho - MG, CEP 35630-072 (Atuação em Bom Despacho-MG e Nova Serrana-MG).
 - **Canais de Contato:**
   - **WhatsApp:** (37) 99100-6747
   - **Instagram:** [@dr.flaviosaraiva_](https://www.instagram.com/dr.flaviosaraiva_/)
@@ -408,10 +408,29 @@ site_flavio/
   - docs/acompanhamento.md (atualizado)
   - walkthrough.md (atualizado)
 
+#### Atualização (27/10/2026) — Atualização das Cidades de Atendimento (Nova Serrana - MG)
+- **O que foi feito:**
+  1. **Substituição de Pitangui por Nova Serrana:**
+     - Atualização do metadado de descrição (`<meta name="description">`) para "Bom Despacho - MG e Nova Serrana - MG".
+     - Atualização do bloco de métricas do Hero ("500+ sorrisos em Bom Despacho e Nova Serrana").
+     - Atualização da resposta do FAQ sobre localização e atendimento presencial.
+     - Atualização da descrição de chamada do CTA Final ("...sua primeira consulta em Bom Despacho ou Nova Serrana").
+     - Atualização do campo "Cidades de Atendimento" no card de contato oficial do CTA ("Bom Despacho - MG e Nova Serrana - MG").
+  2. **Atualização da Base de Dados e Diretrizes:**
+     - Atualizado `docs/info.md` com as cidades oficiais de atendimento (Bom Despacho e Nova Serrana).
+     - Atualizadas referências em `AGENTS.md` e `docs/acompanhamento.md`.
+- **Skills utilizadas:**
+  - `impeccable`, `design-taste-frontend`.
+- **Arquivos criados/modificados:**
+  - `index.html` (modificado)
+  - `docs/info.md` (modificado)
+  - `AGENTS.md` (modificado)
+  - `docs/acompanhamento.md` (atualizado)
+
 ---
 
 ## 5. Próximas Etapas Previstas (Lapidação Seção por Seção)
 
 - [ ] Revisar visualmente cada seção junto ao cliente/usuário e coletar ajustes finos de texto, métricas exatas e preferências de imagens.
 - [ ] Lapidar micro-interações específicas seção por seção (Hero, Carrossel em Leque, Órbita 3D, Antes e Depois, FAQ e Consultório).
-- [ ] Configurar metadados finais de SEO local (Schema.org `Dentist` para Bom Despacho e Pitangui) e Open Graph para compartilhamento no WhatsApp/Instagram.
+- [ ] Configurar metadados finais de SEO local (Schema.org `Dentist` para Bom Despacho e Nova Serrana) e Open Graph para compartilhamento no WhatsApp/Instagram.
