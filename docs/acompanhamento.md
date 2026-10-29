@@ -1007,6 +1007,27 @@ site_flavio/
 
 ---
 
+### [2026-10-29] — Etapa 15: Inclusão de Nova Serrana junto a Bom Despacho no Hero, Chamadas e Metatags
+- **O que foi feito:**
+  1. **Atualização das Metatags e Open Graph:**
+     - `<title>`: atualizado para `Facetas em Resina em Bom Despacho e Nova Serrana | Dr. Flávio Saraiva`.
+     - `<meta property="og:title">` e `<meta name="twitter:title">`: alinhados com o novo título de ambas as cidades.
+     - `<meta property="og:image:alt">`: atualizado para `Dr. Flávio Saraiva — facetas em resina em Bom Despacho e Nova Serrana - MG`.
+  2. **Atualização da Apresentação e Hero:**
+     - Tag badge do Hero (`.tag-badge.tag-dark-glass`): atualizada para `Dentista em Bom Despacho e Nova Serrana · Facetas em Resina · CRO-MG 75116`.
+     - Subtítulo e métricas: preservada a concordância harmoniosa com ambas as cidades já integradas.
+  3. **Atualização da Chamada Final (CTA):**
+     - Parágrafo de agendamento (`.cta-blue-desc`): concordância padronizada para `...sua primeira consulta em Bom Despacho e Nova Serrana.`
+  4. **Preservação do Endereço Físico:**
+     - Mantido intacto o endereço da sede/consultório físico em Bom Despacho (Avenida Vigário Nicolau, 223 - Centro) no rodapé, mapa interativo e dados estruturados Schema.org, preservando rigorosamente as classes e a estrutura do layout.
+- **Skills utilizadas:**
+  - `impeccable`, `design-taste-frontend`.
+- **Arquivos modificados:**
+  - `index.html`
+  - `docs/acompanhamento.md`
+
+---
+
 ## 5. Próximas Etapas Previstas (Lapidação Seção por Seção)
 
 
