@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6.1. Subseção de Depoimentos: Vídeos Reais 9:16 com Click-to-Stream e Áudio Exclusivo
   initVideoTestimonials();
 
+  // 6.1.1. Acordeão Suave das Transcrições dos Depoimentos
+  initVideoTranscriptsAccordion(prefersReducedMotion);
+
   // 6.2. Seção 08: Modal Lightbox para visualização ampliada das fotos da clínica
   initClinicLightbox(prefersReducedMotion);
 
@@ -637,10 +640,6 @@ function initCasesViewToggle() {
                 clearProps: 'transform',
               }
             );
-
-            setTimeout(() => {
-              window.dispatchEvent(new Event('updateStickyCards'));
-            }, 260);
           },
         });
       } else {
@@ -651,9 +650,6 @@ function initCasesViewToggle() {
             img.setAttribute('src', nextSrc);
           }
         });
-        setTimeout(() => {
-          window.dispatchEvent(new Event('updateStickyCards'));
-        }, 320);
       }
     });
   });
@@ -685,10 +681,6 @@ function initFaqAccordion() {
         item.classList.add('is-open');
         trigger.setAttribute('aria-expanded', 'true');
       }
-
-      setTimeout(() => {
-        window.dispatchEvent(new Event('updateStickyCards'));
-      }, 260);
     });
   });
 }
@@ -697,7 +689,8 @@ function initFaqAccordion() {
  * 8. ANIMAÇÃO DE SCROLL: CARD SEGUINTE COBRINDO O CARD ANTERIOR (STACKING CARDS)
  * Cada seção trava ao final de sua leitura (com trecho de pausa visível via margin-bottom)
  * e permanece 100% full-width (sem scale que gere borda lateral) enquanto o próximo card sobe por cima.
- * No mobile, evita recalcular durante a variação da barra de endereço e oculta da GPU cards já 100% cobertos.
+ * ResizeObserver recalcula o offset sticky quando qualquer seção muda de altura (ex.: <details> de transcrições ou FAQ),
+ * coalescido via requestAnimationFrame com leitura em lote antes da escrita para evitar layout thrashing.
  */
 function initStackingCardsScroll() {
   const stackCards = [
@@ -708,21 +701,21 @@ function initStackingCardsScroll() {
 
   if (stackCards.length < 2) return;
 
+  const stickyTargets = stackCards.slice(0, -1);
   let lastWindowWidth = window.innerWidth;
+  let stickyRafId = null;
+  let scrollTriggerTimer = null;
 
-  const updateStickyOffsets = () => {
-    const vh = document.documentElement.clientHeight || window.innerHeight;
-    stackCards.forEach((card, idx) => {
-      if (idx === stackCards.length - 1) return;
-      const cardHeight = card.offsetHeight;
-      const stickyTop = Math.min(0, vh - cardHeight);
-      card.style.top = `${stickyTop}px`;
-    });
-
+  const refreshScrollTrigger = () => {
     if (typeof ScrollTrigger !== 'undefined') {
       ScrollTrigger.refresh();
     }
-    cullCoveredCards();
+  };
+
+  const scheduleScrollTriggerRefresh = () => {
+    if (typeof ScrollTrigger === 'undefined') return;
+    if (scrollTriggerTimer) clearTimeout(scrollTriggerTimer);
+    scrollTriggerTimer = setTimeout(refreshScrollTrigger, 100);
   };
 
   // Libera memória de textura da GPU para seções anteriores que já foram 100% cobertas pela seção seguinte
@@ -738,6 +731,38 @@ function initStackingCardsScroll() {
     }
   };
 
+  const updateStickyOffsets = ({ immediateRefresh = true } = {}) => {
+    const vh = document.documentElement.clientHeight || window.innerHeight;
+    // Leitura em lote antes da escrita para evitar layout thrashing entre seções
+    const heights = stickyTargets.map((card) => card.offsetHeight);
+    let hasTopChanged = false;
+
+    stickyTargets.forEach((card, idx) => {
+      const stickyTop = Math.min(0, vh - heights[idx]);
+      const nextTop = `${stickyTop}px`;
+      if (card.style.top !== nextTop) {
+        card.style.top = nextTop;
+        hasTopChanged = true;
+      }
+    });
+
+    if (immediateRefresh) {
+      refreshScrollTrigger();
+    } else if (hasTopChanged) {
+      scheduleScrollTriggerRefresh();
+    }
+
+    cullCoveredCards();
+  };
+
+  const scheduleStickyUpdate = () => {
+    if (stickyRafId !== null) return;
+    stickyRafId = window.requestAnimationFrame(() => {
+      stickyRafId = null;
+      updateStickyOffsets({ immediateRefresh: false });
+    });
+  };
+
   const onScrollCull = () => {
     if (!rafPending) {
       rafPending = true;
@@ -745,21 +770,28 @@ function initStackingCardsScroll() {
     }
   };
 
-  updateStickyOffsets();
-  window.addEventListener('load', updateStickyOffsets);
+  updateStickyOffsets({ immediateRefresh: true });
+  window.addEventListener('load', () => updateStickyOffsets({ immediateRefresh: true }));
   window.addEventListener('orientationchange', () => {
-    setTimeout(updateStickyOffsets, 180);
+    setTimeout(() => updateStickyOffsets({ immediateRefresh: true }), 180);
   });
   window.addEventListener('resize', () => {
     // No mobile, ignora o resize disparado apenas pela barra de endereço escondendo/aparecendo no scroll
     const currentWidth = window.innerWidth;
     if (Math.abs(currentWidth - lastWindowWidth) > 2) {
       lastWindowWidth = currentWidth;
-      updateStickyOffsets();
+      updateStickyOffsets({ immediateRefresh: true });
     }
   });
-  window.addEventListener('updateStickyCards', updateStickyOffsets);
+  window.addEventListener('updateStickyCards', () => updateStickyOffsets({ immediateRefresh: true }));
   window.addEventListener('scroll', onScrollCull, { passive: true });
+
+  if (typeof ResizeObserver !== 'undefined') {
+    const resizeObserver = new ResizeObserver(() => {
+      scheduleStickyUpdate();
+    });
+    stickyTargets.forEach((card) => resizeObserver.observe(card));
+  }
 }
 
 /**
@@ -1349,6 +1381,109 @@ function initVideoTestimonials() {
   );
 
   cards.forEach((c) => videoObserver.observe(c));
+}
+
+/**
+ * 6.1.1. ACORDEÃO SUAVE DAS TRANSCRIÇÕES DOS DEPOIMENTOS (.video-transcripts)
+ * Interpola abertura e fechamento de <details> via grid-template-rows (0fr -> 1fr) + opacity,
+ * permitindo que o ResizeObserver atualize #casos quadro a quadro sem saltos na seção abaixo.
+ */
+function initVideoTranscriptsAccordion(prefersReducedMotion) {
+  const detailsList = document.querySelectorAll('.video-transcripts');
+  if (!detailsList.length) return;
+
+  detailsList.forEach((details) => {
+    const summary = details.querySelector('summary');
+    const panel = details.querySelector('.video-transcripts-panel');
+    if (!summary || !panel) return;
+
+    let isClosing = false;
+    let closeTimer = null;
+
+    const clearCloseTimer = () => {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+    };
+
+    const syncExpandedState = (expanded) => {
+      details.classList.toggle('is-open', expanded);
+      summary.setAttribute('aria-expanded', String(expanded));
+    };
+
+    syncExpandedState(details.open);
+
+    const openDetails = () => {
+      clearCloseTimer();
+      const wasClosed = !details.open;
+      isClosing = false;
+
+      if (wasClosed) {
+        details.open = true;
+      }
+
+      if (prefersReducedMotion) {
+        syncExpandedState(true);
+        return;
+      }
+
+      if (wasClosed) {
+        // Garante que o frame inicial em 0fr seja resolvido antes de transicionar para 1fr
+        void panel.offsetHeight;
+      }
+
+      window.requestAnimationFrame(() => {
+        if (!isClosing && details.open) {
+          syncExpandedState(true);
+        }
+      });
+    };
+
+    const finishClose = () => {
+      if (!isClosing) return;
+      clearCloseTimer();
+      isClosing = false;
+      details.open = false;
+    };
+
+    const closeDetails = () => {
+      clearCloseTimer();
+      isClosing = true;
+      syncExpandedState(false);
+
+      if (prefersReducedMotion) {
+        finishClose();
+        return;
+      }
+
+      closeTimer = setTimeout(finishClose, 320);
+    };
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (isClosing || !details.open) {
+        openDetails();
+      } else {
+        closeDetails();
+      }
+    });
+
+    panel.addEventListener('transitionend', (e) => {
+      if (e.target === panel && e.propertyName === 'grid-template-rows' && isClosing) {
+        finishClose();
+      }
+    });
+
+    // Sincroniza aberturas nativas (ex.: Ctrl+F / busca no navegador)
+    details.addEventListener('toggle', () => {
+      if (details.open && !isClosing && !details.classList.contains('is-open')) {
+        syncExpandedState(true);
+      } else if (!details.open && !isClosing) {
+        syncExpandedState(false);
+      }
+    });
+  });
 }
 
 /**

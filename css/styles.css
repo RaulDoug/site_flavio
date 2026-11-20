@@ -4814,13 +4814,51 @@ button {
 
 
 
-.video-transcripts[open] summary .transcript-toggle-icon {
+.video-transcripts.is-open summary .transcript-toggle-icon {
 
   transform: rotate(180deg);
 
   background-color: var(--blue-soft);
 
   color: var(--blue-electric);
+
+}
+
+
+
+.video-transcripts-panel {
+
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+
+    grid-template-rows 260ms var(--ease-out),
+
+    opacity 220ms var(--ease-out);
+
+}
+
+
+
+.video-transcripts.is-open .video-transcripts-panel {
+
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+
+}
+
+
+
+.video-transcripts-inner {
+
+  overflow: hidden;
+
+  min-height: 0;
 
 }
 
@@ -7431,6 +7469,12 @@ button {
     transition-duration: 120ms !important;
 
     scroll-behavior: auto !important;
+
+  }
+
+  .video-transcripts-panel {
+
+    transition-property: opacity !important;
 
   }
 
